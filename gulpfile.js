@@ -143,28 +143,28 @@ const compileCss = () => {
 
 const purgeCss = () => {
     return src(`${paths.assets}css/chocolatey.bundle.css`)
-        .pipe(purgecss({
-            content: [
-                `${paths.input}**/*.cshtml`,
-                `${paths.input}**/*.md`,
-                `${paths.assets}js/*.*`,
-                `${paths.theme}scss/_algolia.scss`
-            ],
-            safelist: [
-                '::-webkit-scrollbar',
-                '::-webkit-scrollbar-thumb',
-                'link-light',
-                'bg-purple',
-                'fa-check',
-                'fa-triangle-exclamation',
-                'fa-info',
-                'fa-xmark',
-                'text-bg-warning',
-                'text-bg-danger',
-                'text-bg-success',
-                'text-bg-info'
-            ]
-        }))
+        // .pipe(purgecss({
+        //     content: [
+        //         `${paths.input}**/*.cshtml`,
+        //         `${paths.input}**/*.md`,
+        //         `${paths.assets}js/*.*`,
+        //         `${paths.theme}scss/_algolia.scss`
+        //     ],
+        //     safelist: [
+        //         '::-webkit-scrollbar',
+        //         '::-webkit-scrollbar-thumb',
+        //         'link-light',
+        //         'bg-purple',
+        //         'fa-check',
+        //         'fa-triangle-exclamation',
+        //         'fa-info',
+        //         'fa-xmark',
+        //         'text-bg-warning',
+        //         'text-bg-danger',
+        //         'text-bg-success',
+        //         'text-bg-info'
+        //     ]
+        // }))
         .pipe(dest(`${paths.assets}css/`));
 };
 

@@ -1,10 +1,10 @@
 ---
-Order: 150
-xref: features
-Title: Features
-Description: Chocolatey Features
-Category: features
-RedirectFrom: docs/features
+Order: 140
+xref: central-management
+Title: Chocolatey Central Management (CCM)
+Description: What is CCM?
+Category: product
+RedirectFrom: docs/central-management
 ---
 
 <h1>Non unde molestias nam autem deleniti. </h1><p>Lorem ipsum dolor sit amet. In mollitia deserunt et Quis voluptas est iste nulla ut voluptatem incidunt est nesciunt necessitatibus! Vel sint maiores non porro ipsa et voluptas sint aut provident aspernatur ut totam deserunt. Ut maiores deleniti aut facilis quam hic galisum eaque et quasi alias est voluptate sequi. Non saepe voluptas non delectus inventore sit illum voluptatem aut blanditiis mollitia in iste obcaecati. Ut animi harum in galisum sint in fuga voluptatem aut repudiandae quae. Et aliquam incidunt ut iure laborum et nobis sunt. Sed voluptatem quae vel quos itaque est expedita minus id fuga incidunt in quaerat voluptate cum magni adipisci. </p><h2>Sed perspiciatis sunt aut enim consequatur aut omnis laborum. </h2><p>Sed quae nisi ad eius atque et enim esse sed animi adipisci quo officiis neque aut odio accusantium. Quo necessitatibus error est minus officia eos iusto dolores cum earum error ut repellat beatae rem harum autem. Qui veritatis doloremque eum consequatur assumenda eos ducimus architecto et animi fugit. Qui sint dicta 33 rerum provident et assumenda ullam sit eligendi aliquid aut laudantium ipsa. Nam porro ducimus ut Quis dolores et quos accusantium aut voluptate quia et beatae veniam! Et expedita nihil eum magni quis ut commodi fugit et dolorem veniam ex quae enim et explicabo aliquid ea nostrum velit. Et illo accusamus et earum iste est quia odio nam excepturi corporis eos animi commodi sit sunt voluptatem. In voluptatum magni et maiores perferendis id praesentium illo non amet nemo qui provident repudiandae. Ab ratione quia est libero enim ut unde dolorum ut corporis autem sit iste ullam sed itaque molestiae ut minus eaque. </p><h3>Ex voluptatem rerum sit maxime quam. </h3><p>Ut obcaecati esse qui quia iure aut dolore officia est eaque quod aut tempore suscipit quo voluptas placeat in quisquam voluptatem. Est nostrum porro ea magnam sunt ad mollitia omnis cum eligendi voluptates vel amet voluptatem. Et quibusdam internos qui doloribus nisi quo facere enim aut obcaecati officia qui exercitationem provident. Et corrupti itaque qui voluptatem iste non magnam minus. Aut sint tempora aut modi modi eos illo corporis quo reprehenderit vero et quas doloribus est perferendis ipsum. Et rerum distinctio et rerum sunt ea iste magni sit beatae nisi est nobis soluta! Et laboriosam officia cum necessitatibus assumenda qui nobis vero est quia necessitatibus sed rerum esse ut sint maiores 33 maiores inventore! </p><ul><li>Aut omnis temporibus 33 corrupti odio cum similique Quis est praesentium velit. </li><li>Aut quam consequatur ea illo totam! </li><li>Non repellat molestias est doloribus omnis et quia libero sit voluptatibus iusto. </li></ul>

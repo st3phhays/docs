@@ -17,6 +17,7 @@
   "resolutions": {
     "glob-parent": "^6.0.2",
     "nth-check": "^2.1.1",
-    "terser": "^5.14.2"
+    "terser": "^5.14.2",
+    "choco-theme": "portal:/Users/stephanieburrows/source/choco-theme"
   }
 }

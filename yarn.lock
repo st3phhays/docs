@@ -3291,9 +3291,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"choco-theme@npm:0.5.11":
-  version: 0.5.11
-  resolution: "choco-theme@npm:0.5.11"
+"choco-theme@portal:/Users/stephanieburrows/source/choco-theme::locator=docs%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "choco-theme@portal:/Users/stephanieburrows/source/choco-theme::locator=docs%40workspace%3A."
   dependencies:
     "@babel/core": ^7.18.9
     "@babel/preset-env": ^7.18.9
@@ -3351,7 +3351,7 @@ __metadata:
     mousetrap: ^1.6.5
     nouislider: ^15.7.0
     rimraf: ^3.0.2
-    sass: ^1.53.0
+    sass: ~1.64.2
     stylelint: ^14.14.0
     stylelint-config-standard: ^29.0.0
     stylelint-config-standard-scss: ^5.0.0
@@ -3359,9 +3359,8 @@ __metadata:
     typescript: 5.0.4
     vinyl-buffer: ^1.0.1
     vinyl-source-stream: ^2.0.0
-  checksum: 9b4e09b01c26f64ee3542112ae9b5ccaa1e1eddedc0e60c86e6690e70d51d4ef62b4b1914767bd071902505c31d67c2b808d5159558f71222d65ee2ad23cccb2
   languageName: node
-  linkType: hard
+  linkType: soft
 
 "chokidar@npm:>=3.0.0 <4.0.0":
   version: 3.5.3
@@ -8901,7 +8900,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.53.0":
+"sass@npm:~1.64.2":
   version: 1.64.2
   resolution: "sass@npm:1.64.2"
   dependencies:
