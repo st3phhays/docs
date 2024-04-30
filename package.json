@@ -1,5 +1,16 @@
 {
-  "name": "",
+  "name": "docs",
+  "packageManager": "yarn@4.1.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chocolatey/docs.git"
+  },
+  "author": "chocolatey",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/chocolatey/docs/issues"
+  },
+  "homepage": "https://github.com/chocolatey/docs#readme",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,11 +18,16 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "choco-theme": "yarn dlx --quiet ts-node --skipIgnore node_modules/choco-theme/build/choco-theme.ts --repository=docs"
   },
   "dependencies": {
-    "astro": "^4.7.0",
     "@astrojs/check": "^0.5.10",
+    "astro": "^4.7.0",
+    "choco-theme": "https://github.com/st3phhays/choco-theme#testing-and-development",
     "typescript": "^5.4.5"
+  },
+  "resolutions": {
+    "choco-theme": "portal:/Users/stephanieburrows/source/choco-theme"
   }
 }

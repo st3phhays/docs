@@ -12,6 +12,14 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# yarn 
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # environment variables
 .env
@@ -22,3 +30,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# general
+apple-touch-*.png
+favicon.ico
