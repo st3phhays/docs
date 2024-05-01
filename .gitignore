@@ -31,6 +31,12 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# choco-theme
+public/fonts
+public/scripts
+public/styles
+public/images/global-shared
+
 # general
 apple-touch-*.png
 favicon.ico
