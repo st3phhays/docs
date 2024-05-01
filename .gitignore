@@ -40,3 +40,4 @@ public/images/global-shared
 # general
 apple-touch-*.png
 favicon.ico
+.astro

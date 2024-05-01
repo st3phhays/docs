@@ -1,0 +1,12 @@
+---
+const { doc, listItemClass, paddingClass } = Astro.props;
+const activeSlug = Astro.url.pathname.substring(1);
+
+const isActivePage = () => {
+    return doc.slug === activeSlug;
+};
+---
+
+<li class={`nav-item ${listItemClass ? listItemClass : ''}`}>
+    <a class={`nav-link ${paddingClass} ${isActivePage() ? 'active active-page' : ''}`} href={`/${doc.slug}`}>{doc.data.title}</a>
+</li>

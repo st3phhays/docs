@@ -1,6 +1,10 @@
 ---
 import childProcess from 'child_process';
 import { config } from '@scripts/config.ts';
+
+// Components
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import ContentSidebar from '@components/content-sidebar/ContentSidebar.astro';
 import GlobalNavigation from '@components/global/GlobalNavigation.astro';
 import ThemeToggle from '@components/global/ThemeToggle.astro';
 
@@ -8,6 +12,7 @@ const { title, description } = Astro.props;
 const canonicalURL = new URL(Astro.url, Astro.site);
 const metaTitle = title !== config.title ? `${config.title} Docs | ${title}` : `${config.title} Docs`;
 const socialImageURL = new URL(`/share-og.png`, Astro.site);
+const isHome = title === config.titleHome;
 
 // obtain Git commit hash
 const hash = childProcess
@@ -71,7 +76,7 @@ const hash = childProcess
             </div>
             <nav id="topNav" class="navbar navbar-expand-md">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="/en-us">
                         <img class="d-md-none" src="/images/global-shared/logo.svg" alt="Chocolatey" />
                         <img class="d-none d-md-block navbar-brand-desktop" src="/images/global-shared/logo-square.svg" alt="Chocolatey" />
                     </a>
@@ -91,7 +96,41 @@ const hash = childProcess
             </nav>
         </header>
 		<main>
-			<slot />
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-xl-2 p-0 text-bg-body-secondary border-end">
+                        <div id="leftSidebarNav" class="sticky-md-top collapse-y-height">
+                            <nav class="navbar navbar-expand-md p-0">
+                                <div id="leftSidebar" class="collapse navbar-collapse">
+                                    <div class="d-sm-none">
+                                        <div class="global-nav">
+                                            <GlobalNavigation />
+                                        </div>
+                                    </div>
+                                    <ContentSidebar transition:persist />
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-xl-10 py-3 py-md-5 px-md-4 mx-auto">
+                        <div class="container d-xl-none">
+                            <h1 class="title">{title}</h1>
+                            <Breadcrumbs isHome={isHome} />
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div id="mainContent" class="anchorjs-container col-xl-10 order-2 order-xl-1">
+                                    <div class="d-none d-xl-block">
+                                        <h1 class="title">{title}</h1>
+                                        <Breadcrumbs isHome={isHome} />
+                                    </div>
+                                    <slot />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 		</main>
 		<footer class="flex-shrink-0" transition:persist>
             <div class="text-bg-body-secondary border-top text-center p-3">

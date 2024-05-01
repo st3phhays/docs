@@ -1,0 +1,84 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+// Components
+import ContentSidebarList from '@components/content-sidebar/ContentSidebarList.astro';
+import ContentSidebarListItem from '@components/content-sidebar/ContentSidebarListItem.astro';
+import { config } from '@scripts/config';
+
+const docsEntries = await getCollection('docs');
+
+const transformData = (data: CollectionEntry<'docs'>, parentSlug = "") => {
+    const map = {};
+    const result: any[] = [];
+
+    data.forEach((item: CollectionEntry<'docs'>) => {
+        map[item.slug] = { ...item, children: [] };
+    });
+
+    data.forEach((item: CollectionEntry<'docs'>) => {
+        if (item.slug !== parentSlug) {
+            const parent = map[item.slug.split('/').slice(0, -1).join('/')];
+            if (parent) {
+                parent.children.push(map[item.slug]);
+            } else {
+                result.push(map[item.slug]);
+            }
+        }
+    });
+
+    return result;
+};
+
+const transformedData = transformData(docsEntries);
+---
+
+<ul class="navbar-nav">
+    {transformedData.map(parent => (
+        parent.data.title == config.titleHome && (
+            <ContentSidebarListItem doc={parent} listItemClass={'nav-item-blue'} paddingClass={'ps-c2'} />
+        )
+    ))}
+    {transformedData[0].children.map(parent => (
+        parent.children && parent.children.length > 0 ? (
+            <ContentSidebarList doc={parent} listItemClass={true} paddingClass={'ps-3'}>
+                {parent.children.map(child => (
+                    child.children && child.children.length > 0 ? (
+                        <ContentSidebarList doc={child} paddingClass={'ps-c2'}>
+                            {child.children.map(grandChild => (
+                                grandChild.children && grandChild.children.length > 0 ? (
+                                    <ContentSidebarList doc={grandChild} paddingClass={'ps-5'}>
+                                        {grandChild.children.map(greatGrandChild => (
+                                            greatGrandChild.children && greatGrandChild.children.length > 0 ? (
+                                                <ContentSidebarList doc={greatGrandChild} paddingClass={'ps-c4'}>
+                                                    {greatGrandChild.children.map(greatGreatGrandChild => (
+                                                        greatGreatGrandChild.children && greatGreatGrandChild.children.length > 0 ? (
+                                                            <ContentSidebarList doc={greatGreatGrandChild} paddingClass={'ps-c5'}>
+
+                                                            </ContentSidebarList>
+                                                        ) : (
+                                                            <ContentSidebarListItem doc={greatGreatGrandChild} paddingClass={'ps-c5'} />
+                                                        )
+                                                    ))}
+                                                </ContentSidebarList>
+                                            ) : (
+                                                <ContentSidebarListItem doc={greatGrandChild} paddingClass={'ps-c4'} />
+                                            )
+                                        ))}
+                                    </ContentSidebarList>
+                                ) : (
+                                    <ContentSidebarListItem doc={grandChild} paddingClass={'ps-5'} />
+                                )
+                            ))}
+                        </ContentSidebarList>
+                    ) : (
+                        <ContentSidebarListItem doc={child} paddingClass={'ps-c2'} />
+                    )
+                ))}
+            </ContentSidebarList>
+        ) : (
+            <ContentSidebarListItem doc={parent} listItemClass={'nav-item-blue'} paddingClass={'ps-c2'} />
+        )
+    ))}
+</ul>
