@@ -11,10 +11,10 @@ export default defineConfig({
     // host: true
   },
   redirects: {
-    '/': '/en-us',
+    './': '/en-us',
   },
   experimental: {
-    contentCollectionCache: true,
+    // contentCollectionCache: true,
   },
   integrations: [mdx()]
 });

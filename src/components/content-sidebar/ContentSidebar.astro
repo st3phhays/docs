@@ -7,17 +7,25 @@ import ContentSidebarList from '@components/content-sidebar/ContentSidebarList.a
 import ContentSidebarListItem from '@components/content-sidebar/ContentSidebarListItem.astro';
 import { config } from '@scripts/config';
 
-const docsEntries = await getCollection('docs');
+const docsEntries = await getCollection('docs', ({ data }) => {
+    delete data.redirectFrom;
+    delete data.xref;
+
+    return data.showInSidebar !== false;
+});
 
 const transformData = (data: CollectionEntry<'docs'>, parentSlug = "") => {
     const map = {};
-    const result: any[] = [];
+    const result: [] = [];
 
-    data.forEach((item: CollectionEntry<'docs'>) => {
+    // Sort by `order` in frontmatter
+    const sortedDocs = data.sort((a: { data: { order: number; }; }, b: { data: { order: number; }; }) => a.data.order - b.data.order);
+
+    sortedDocs.forEach((item: CollectionEntry<'docs'>) => {
         map[item.slug] = { ...item, children: [] };
     });
 
-    data.forEach((item: CollectionEntry<'docs'>) => {
+    sortedDocs.forEach((item: CollectionEntry<'docs'>) => {
         if (item.slug !== parentSlug) {
             const parent = map[item.slug.split('/').slice(0, -1).join('/')];
             if (parent) {

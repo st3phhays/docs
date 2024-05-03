@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+
+const { title, value, anchor } = Astro.props
+const docsEntries = await getCollection('docs');
+const xrefs: { [key: string]: string }[] = [];
+
+docsEntries.map((doc) => {
+    // If no xref, use the slug
+    if (!doc.data.xref) {
+        const parts = doc.slug.split('/');
+        const lastPart = parts[parts.length - 1];
+
+        doc.data.xref = lastPart;
+    }
+
+    xrefs.push({
+        [doc.data.xref]: doc.slug,
+    });
+});
+
+const findKey = (array, key) => {
+    const result = array.find(item => key in item);
+    return result ? result[key] : null;
+};
+
+let xref = findKey(xrefs, value);
+
+// If an anchor was provided, append it to the slug
+if (anchor) {
+    xref = `/${xref}#${anchor}`;
+}
+---
+
+<a href={xref} title={title}>{title}</a>
