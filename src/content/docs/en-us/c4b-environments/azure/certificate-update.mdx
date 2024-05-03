@@ -17,7 +17,7 @@ For portions of this document using PowerShell, we assume you have installed a r
 
 ## Access Policies
 
-Similar to the Access Policies configuration needed to [access](xref:c4b-azure#accessing-services) the usernames and passwords for the services running in your C4B Azure Environment, you will need to configure access to manage the SSL certificate.
+Similar to the Access Policies configuration needed to <Xref title="access" value="c4b-azure" anchor="accessing-services" /> the usernames and passwords for the services running in your C4B Azure Environment, you will need to configure access to manage the SSL certificate.
 
 You can adjust the Access Policies using the Azure Portal or PowerShell.
 
@@ -65,7 +65,7 @@ The certificate used by most of the C4B Azure Environment is stored in the provi
 
 > :choco-info: **NOTE**
 >
-> Please note that the new certificate must meet the same requirements as the original did during the [initial deployment](xref:c4b-azure#ssl-certificate). The certificate:
+> Please note that the new certificate must meet the same requirements as the original did during the <Xref title="initial deployment" value="c4b-azure" anchor="ssl-certificate" />. The certificate:
 >
 > * Needs to be in the PFX format.
 > * Needs to include an exportable Private Key.
@@ -125,7 +125,7 @@ The Application Gateway provided with your C4B Azure Environment needs to be upd
 
 > :choco-info: **NOTE**
 >
-> In addition to the certificate in a PFX format that was used in the [previous section](xref:c4b-azure-cert-update#updating-the-azure-key-vault), you will need a copy of the certificate in CER format.
+> In addition to the certificate in a PFX format that was used in the <Xref title="previous section" value="c4b-azure-cert-update" anchor="updating-the-azure-key-vault" />, you will need a copy of the certificate in CER format.
 >
 > You can convert your existing certificate using OpenSSL (easily installed by running `choco install openssl.light`):
 >
@@ -171,7 +171,7 @@ The Application Gateway provided with your C4B Azure Environment needs to be upd
 
     ![Application Gateway listeners cert update](/images/c4b-azure/Cert-AppGateway-ListenersCert.png)
 
-1. It can take some time for the Application Gateway to update. When it has finished you will be able check that the new certificate is being served by visiting on the C4B Azure Environment [services](xref:c4b-azure#accessing-services).
+1. It can take some time for the Application Gateway to update. When it has finished you will be able check that the new certificate is being served by visiting on the C4B Azure Environment <Xref title="services" value="c4b-azure" anchor="accessing-services" />.
 
 ### PowerShell
 

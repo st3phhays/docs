@@ -18,37 +18,37 @@ This is a listing of all of the different things you can pass to choco.
 
 ## Commands
 
- * [apikey](xref:choco-command-apikey) - retrieves, saves or deletes an API key for a particular source
- * [cache](xref:choco-command-cache) - Manage the local HTTP caches used to store queries (v2.1.0+)
- * [config](xref:choco-command-config) - Retrieve and configure config file settings
- * [convert](xref:choco-command-convert) - converts packages from one type to another type
- * [download](xref:choco-command-download) - downloads packages - optionally internalizing all remote resources
- * [export](xref:choco-command-export) - exports list of currently installed packages
- * [feature](xref:choco-command-feature) - view and configure choco features
- * [features](xref:choco-command-features) - view and configure choco features (alias for feature)
- * [find](xref:choco-command-find) - searches remote packages (alias for search)
- * [help](xref:choco-command-help) - displays top level help information for choco
- * [info](xref:choco-command-info) - retrieves package information. Shorthand for choco search pkgname --exact --verbose
- * [optimize](xref:choco-command-optimize) - optimizes installation, reducing space usage
- * [install](xref:choco-command-install) - installs packages using configured sources
- * [list](xref:choco-command-list) - lists local packages
- * [new](xref:choco-command-new) - creates template files for creating a new Chocolatey package
- * [outdated](xref:choco-command-outdated) - retrieves information about packages that are outdated. Similar to upgrade all --noop
- * [pack](xref:choco-command-pack) - packages nuspec, scripts, and other Chocolatey package resources into a nupkg file
- * [pin](xref:choco-command-pin) - suppress upgrades for a package
- * [push](xref:choco-command-push) - pushes a compiled nupkg to a source
- * [search](xref:choco-command-search) - searches remote packages
- * [setapikey](xref:choco-command-setapikey) - retrieves, saves or deletes an API key for a particular source (alias for apikey)
- * [source](xref:choco-command-source) - view and configure default sources
- * [sources](xref:choco-command-sources) - view and configure default sources (alias for source)
- * [support](xref:choco-command-support) - provides support information
- * [sync](xref:choco-command-sync) - synchronizes against system installed software - generates missing packages
- * [synchronize](xref:choco-command-synchronize) - synchronizes against system installed software - generates missing packages
- * [template](xref:choco-command-template) - get information about installed templates
- * [templates](xref:choco-command-templates) - get information about installed templates (alias for template)
- * [uninstall](xref:choco-command-uninstall) - uninstalls a package
- * [unpackself](xref:choco-command-unpackself) - re-installs Chocolatey base files
- * [upgrade](xref:choco-command-upgrade) - upgrades packages from various sources
+ * <Xref title="apikey" value="choco-command-apikey" /> - retrieves, saves or deletes an API key for a particular source
+ * <Xref title="cache" value="choco-command-cache" /> - Manage the local HTTP caches used to store queries (v2.1.0+)
+ * <Xref title="config" value="choco-command-config" /> - Retrieve and configure config file settings
+ * <Xref title="convert" value="choco-command-convert" /> - converts packages from one type to another type
+ * <Xref title="download" value="choco-command-download" /> - downloads packages - optionally internalizing all remote resources
+ * <Xref title="export" value="choco-command-export" /> - exports list of currently installed packages
+ * <Xref title="feature" value="choco-command-feature" /> - view and configure choco features
+ * <Xref title="features" value="choco-command-features" /> - view and configure choco features (alias for feature)
+ * <Xref title="find" value="choco-command-find" /> - searches remote packages (alias for search)
+ * <Xref title="help" value="choco-command-help" /> - displays top level help information for choco
+ * <Xref title="info" value="choco-command-info" /> - retrieves package information. Shorthand for choco search pkgname --exact --verbose
+ * <Xref title="optimize" value="choco-command-optimize" /> - optimizes installation, reducing space usage
+ * <Xref title="install" value="choco-command-install" /> - installs packages using configured sources
+ * <Xref title="list" value="choco-command-list" /> - lists local packages
+ * <Xref title="new" value="choco-command-new" /> - creates template files for creating a new Chocolatey package
+ * <Xref title="outdated" value="choco-command-outdated" /> - retrieves information about packages that are outdated. Similar to upgrade all --noop
+ * <Xref title="pack" value="choco-command-pack" /> - packages nuspec, scripts, and other Chocolatey package resources into a nupkg file
+ * <Xref title="pin" value="choco-command-pin" /> - suppress upgrades for a package
+ * <Xref title="push" value="choco-command-push" /> - pushes a compiled nupkg to a source
+ * <Xref title="search" value="choco-command-search" /> - searches remote packages
+ * <Xref title="setapikey" value="choco-command-setapikey" /> - retrieves, saves or deletes an API key for a particular source (alias for apikey)
+ * <Xref title="source" value="choco-command-source" /> - view and configure default sources
+ * <Xref title="sources" value="choco-command-sources" /> - view and configure default sources (alias for source)
+ * <Xref title="support" value="choco-command-support" /> - provides support information
+ * <Xref title="sync" value="choco-command-sync" /> - synchronizes against system installed software - generates missing packages
+ * <Xref title="synchronize" value="choco-command-synchronize" /> - synchronizes against system installed software - generates missing packages
+ * <Xref title="template" value="choco-command-template" /> - get information about installed templates
+ * <Xref title="templates" value="choco-command-templates" /> - get information about installed templates (alias for template)
+ * <Xref title="uninstall" value="choco-command-uninstall" /> - uninstalls a package
+ * <Xref title="unpackself" value="choco-command-unpackself" /> - re-installs Chocolatey base files
+ * <Xref title="upgrade" value="choco-command-upgrade" /> - upgrades packages from various sources
 
 
 Please run chocolatey with `choco command -help` for specific help on
@@ -107,9 +107,9 @@ based on choco not receiving things you think you are passing to it.
 
  * For consistency, always use `choco`, not `choco.exe`.
  * Always have the command as the first argument to `choco`. e.g.
-   [`choco install`](xref:choco-command-install), where [`install`](xref:choco-command-install) is the command.
+   <Xref title="`choco install`" value="choco-command-install" />, where <Xref title="`install`" value="choco-command-install" /> is the command.
  * If there is a subcommand, ensure that is the second argument. e.g.
-   `choco source list`, where `source` is the command and [`list`](xref:choco-command-list) is the
+   `choco source list`, where `source` is the command and <Xref title="`list`" value="choco-command-list" /> is the
    subcommand.
  * Typically the subject comes next. If installing packages, the
    subject would be the package names, e.g. `choco install pkg1 pkg2`.
@@ -144,8 +144,8 @@ based on choco not receiving things you think you are passing to it.
  * If you are building PowerShell scripts, you can most likely just
    simply use apostrophes surrounding option values, e.g.
    `--source='internal_server'`.
- * Prefer upgrade to install in scripts. You can't [`install`](xref:choco-command-install) to a newer
-   version of something, but you can [`choco upgrade`](xref:choco-command-upgrade) which will do both
+ * Prefer upgrade to install in scripts. You can't <Xref title="`install`" value="choco-command-install" /> to a newer
+   version of something, but you can <Xref title="`choco upgrade`" value="choco-command-upgrade" /> which will do both
    upgrade or install (unless switched off explicitly).
  * If you are sharing the script with others, pass `--source` to be
    explicit about where the package is coming from. Use full link and

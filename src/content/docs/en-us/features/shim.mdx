@@ -92,11 +92,11 @@ We tried using batch ("*.bat") files, and it mostly works, but when applications
 
 ### Have you thought about shimming in more places?
 
-Yes, but we have not decided whether shimming Program Files is a good idea yet or not. Packages can explicitly enforce shims with [Install-BinFile](xref:install-binfile).
+Yes, but we have not decided whether shimming Program Files is a good idea yet or not. Packages can explicitly enforce shims with <Xref title="Install-BinFile" value="install-binfile" />.
 
 ### I need to shim a non-exe file.
 
-If you are creating a package and you need to shim a file that doesn't end in .exe (like a .bat file), you should look at [Install-BinFile](xref:install-binfile).
+If you are creating a package and you need to shim a file that doesn't end in .exe (like a .bat file), you should look at <Xref title="Install-BinFile" value="install-binfile" />.
 
 ### I need to exclude a file from shimming.
 
@@ -104,7 +104,7 @@ If you are creating a package and you want to skip creation of a shim for a part
 
 Set an empty file next to the executable (or where it will be downloaded/unpacked to), sharing the same name with the executable and appending ".ignore". For example, if your file is named "`bob.exe`", you need a file named "`bob.exe.ignore`" (pay attention to case - "`BOB.exe.ignore`" may not work with all versions of Chocolatey).
 
-[Read more...](xref:create-packages#how-do-i-exclude-executables-from-getting-shims)
+<Xref title="Read more..." value="create-packages" anchor="how-do-i-exclude-executables-from-getting-shims" />
 
 ### I have architecture specific binaries to shim
 
@@ -120,7 +120,7 @@ Chocolatey will automatically detect GUI applications and adjust the shim accord
 
 If you are creating a package and want the shim to exit immediately after calling the application, create an empty "*.gui" file next to where the exe file is (or where it will be downloaded/unpacked to), sharing the same name with the executable and appending ".gui". For example, if your file is named "`bob.exe`", you need a file named "`bob.exe.gui`" (pay attention to case - "`BOB.exe.gui`" may not work with all versions of Chocolatey).
 
-[Read more...](xref:create-packages#how-do-i-set-up-shims-for-applications-that-have-a-gui)
+<Xref title="Read more..." value="create-packages" anchor="how-do-i-set-up-shims-for-applications-that-have-a-gui" />
 
 ### A package messed up and should have set up a shim as a GUI.
 

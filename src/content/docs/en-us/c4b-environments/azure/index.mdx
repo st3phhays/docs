@@ -64,13 +64,13 @@ Fill your intended domain name in, select and upload your PFX certificate, and e
 > :choco-info: **NOTE**
 >
 > The PFX certificate must contain the exportable private key, and should be protected with a password.
-> Suggestions for creating a PFX certificate can be found [here](xref:c4b-azure#ssl-certificate).
+> Suggestions for creating a PFX certificate can be found <Xref title="here" value="c4b-azure" anchor="ssl-certificate" />.
 
 ### Internalize Packages
 
 You can select packages to directly internalize from the [Chocolatey Community Repository](https://community.chocolatey.org/packages/).
 
-We offer bundles of recommended packages (see [recommendations](xref:c4b-azure-packages#recommendations) for the exact content of each bundle).
+We offer bundles of recommended packages (see <Xref title="recommendations" value="c4b-azure-packages" anchor="recommendations" /> for the exact content of each bundle).
 
 You can then select any of the **Additional Packages**, which will be added to the bundle you choose.
 
@@ -130,7 +130,7 @@ If you need help with another registrar, we recommend searching for their docume
 
 > :choco-warning: **WARNING**
 >
-> You cannot create users in Chocolatey Central Management until you have configured an SMTP server. To do this, please see [how to configure SMTP](xref:ccm-website#step-4.2-smtp-configuration).
+> You cannot create users in Chocolatey Central Management until you have configured an SMTP server. To do this, please see <Xref title="how to configure SMTP" value="ccm-website" anchor="step-4.2-smtp-configuration" />.
 > You can log in to Chocolatey Central Management using the credentials provided in the KeyVault (see [Accessing Services](#accessing-services), below).
 
 ## Accessing Services
@@ -276,7 +276,7 @@ This is based on:
 
 The only way to accomplish this is by setting the public IP address statically _from the start_. Once the public IP address is created, the application gateway does not support changing it. More information can be found [in the Microsoft documentation here.](https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/configure-public-ip-application-gateway)
 
-What _can_ be done is creating a CNAME record pointing at the existing DNS record of the Application Gateway. For assistance in setting this CNAME DNS record, please see our [supporting documentation](xref:c4b-azure#dns-configuration).
+What _can_ be done is creating a CNAME record pointing at the existing DNS record of the Application Gateway. For assistance in setting this CNAME DNS record, please see our <Xref title="supporting documentation" value="c4b-azure" anchor="dns-configuration" />.
 
 ## Common Errors and Resolutions
 
@@ -306,9 +306,9 @@ Now you need to deploy the `chocolatey-licensed-jenkins-scripts` package to Choc
 
 1. Log into Chocolatey Central Management at `https://<FQDN>/`
 1. Navigate to `Groups` and create a group the contains only ChocoServer if that does not already exist
-1. Create a [Deployment Plan](xref:ccm-deployments) that targets the group containing ChocoServer
+1. Create a <Xref title="Deployment Plan" value="ccm-deployments" /> that targets the group containing ChocoServer
 1. Add a basic step, selecting the `choco install` command and specifying the package name `chocolatey-licensed-jenkins-scripts`
-1. Move this Deployment Plan to the Ready [state](xref:ccm-deployments#deployment-states) and then run it
+1. Move this Deployment Plan to the Ready <Xref title="state" value="ccm-deployments" anchor="deployment-states" /> and then run it
 
 ### Status Message: Exist soft deleted vault with the same name.  (Code:ConflictError)
 

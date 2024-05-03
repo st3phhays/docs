@@ -5,7 +5,7 @@ title: How To Create an MSI Installer Package
 description: Creating a package that installs an MSI
 ---
 
-When starting out with Chocolatey products, why not start simple? Installing an MSI is a popular use of a Chocolatey package, and we'll walk you through how to do just that - assuming you've already run through [Preparing Your Environment for Package Creation](xref:howto-prepare-env).
+When starting out with Chocolatey products, why not start simple? Installing an MSI is a popular use of a Chocolatey package, and we'll walk you through how to do just that - assuming you've already run through <Xref title="Preparing Your Environment for Package Creation" value="howto-prepare-env" />.
 
 ### What Is an MSI
 
@@ -15,7 +15,7 @@ Consequently, they're often appreciated by busy Systems Administrators who want 
 
 ### Using `Install-ChocolateyPackage`
 
-Chocolatey supports a lot of different types of installer, including MSIs. EXEs, MSIs, and MSUs (all popular install formats) are normally installed using the [`Install-ChocolateyPackage`](xref:install-chocolateypackage) function - and, in fact, our default template for a new package contains an example of this!
+Chocolatey supports a lot of different types of installer, including MSIs. EXEs, MSIs, and MSUs (all popular install formats) are normally installed using the <Xref title="`Install-ChocolateyPackage`" value="install-chocolateypackage" /> function - and, in fact, our default template for a new package contains an example of this!
 
 You can inspect the full set of available parameters for this function at the link above.
 
@@ -43,7 +43,7 @@ In this example, we're going to be creating a new Firefox MSI package.
 > :choco-info: For the purposes of the example, we'll provide URLs that work at time of writing. If you were creating a package from scratch, you would want to find the URLs for the installers yourself.
 > In this case, we browsed to [Mozilla's download site](https://www.mozilla.org/en-GB/firefox/all/#product-desktop-release) and grabbed the URL of the MSI(s) we wanted.
 
-There are [package templates](xref:create-custom-package-templates) to create various package types, including an MSI template!
+There are <Xref title="package templates" value="create-custom-package-templates" /> to create various package types, including an MSI template!
 
 We'll use this to create our new MSI package:
 

@@ -22,7 +22,7 @@ When setting up Central Management, currently, the CCM packages do not provision
 >
 > * Please read through all of this prior to running installation as you could run into issues that require support to help you correct later.
 >
-> * If this seems like a lot to set up, you have access to the [Quick Start Guide](xref:c4b-quick-start-guide) which makes setup of Chocolatey Central Management just running one Powershell script. We also offer our [Chocolatey For Business Azure Environment](xref:c4b-azure). It comes preloaded with Chocolatey Central Management and other Chocolatey recommended infrastructure.
+> * If this seems like a lot to set up, you have access to the <Xref title="Quick Start Guide" value="c4b-quick-start-guide" /> which makes setup of Chocolatey Central Management just running one Powershell script. We also offer our <Xref title="Chocolatey For Business Azure Environment" value="c4b-azure" />. It comes preloaded with Chocolatey Central Management and other Chocolatey recommended infrastructure.
 >
 
 ## High Level Requirements
@@ -40,7 +40,7 @@ Additionally, the Chocolatey Central Management components should be installed o
 
 > :choco-info: **NOTE**
 >
-> Make sure you have read over the [CCM Compatibility Matrix](xref:central-management#ccm-component-compatibility-matrix) prior to starting internalization as this will save you some headaches.
+> Make sure you have read over the <Xref title="CCM Compatibility Matrix" value="central-management" anchor="ccm-component-compatibility-matrix" /> prior to starting internalization as this will save you some headaches.
 
 The complete installation of CCM requires several packages that are available from the community repository. Let's get them internalized. We will internalize them to a `C:\packages` directory. It is highly recommended that you push the packages to an internal repository before continuing with other steps in this guide. Change the values in the first lines of this script to match what you need in your environment.
 
@@ -88,7 +88,7 @@ Get-ChildItem C:\packages -Recurse -Filter *.nupkg | Foreach-Object { choco push
 
 ## Step 2: Setup Central Management Database
 
-Please see [Central Management Database Setup](xref:ccm-database).
+Please see <Xref title="Central Management Database Setup" value="ccm-database" />.
 
 > :choco-info: **NOTE**
 >
@@ -96,7 +96,7 @@ Please see [Central Management Database Setup](xref:ccm-database).
 
 ## Step 3: Setup Central Management Windows Service(s)
 
-Please see [Central Management Service Setup](xref:ccm-service).
+Please see <Xref title="Central Management Service Setup" value="ccm-service" />.
 
 > :choco-info: **NOTE**
 >
@@ -104,7 +104,7 @@ Please see [Central Management Service Setup](xref:ccm-service).
 
 ## Step 4: Setup Central Management Website
 
-Please see [Central Management Web Setup](xref:ccm-website).
+Please see <Xref title="Central Management Web Setup" value="ccm-website" />.
 
 > :choco-info: **NOTE**
 >
@@ -112,11 +112,11 @@ Please see [Central Management Web Setup](xref:ccm-website).
 
 ## Step 5: Setting up Agent Machines
 
-Please see [Central Management Client Setup](xref:ccm-client).
+Please see <Xref title="Central Management Client Setup" value="ccm-client" />.
 
 ## Upgrading?
 
-Looking for upgrade instructions? See [Central Management Upgrade](xref:ccm-upgrade).
+Looking for upgrade instructions? See <Xref title="Central Management Upgrade" value="ccm-upgrade" />.
 
 ## Common Errors and Resolutions
 
@@ -132,4 +132,4 @@ You need to check the CCM service logs. The agent will always report success whe
 
 The logs are located at `$env:ChocolateyInstall\logs\ccm-service.log`. If you are on a version of CCM prior to 0.2.0, the log will be located at `$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\logs\chocolatey.service.host.log`.
 
-[Chocolatey Central Management](xref:central-management)
+<Xref title="Chocolatey Central Management" value="central-management" />

@@ -10,7 +10,7 @@ As of [choco 0.9.9.9](https://github.com/chocolatey/choco/issues/76), you can cr
 
 ## Overview
 
-A template is used for creating packages. Chocolatey (choco) has a built-in template that it uses when generating a new package from the command [`choco new`](xref:choco-command-new).
+A template is used for creating packages. Chocolatey (choco) has a built-in template that it uses when generating a new package from the command <Xref title="`choco new`" value="choco-command-new" />.
 
 ### Where do Templates go?
 
@@ -24,7 +24,7 @@ You would call `choco new pkgname -t organization` and choco will use the templa
 
 If you are using a version of Chocolatey CLI earlier than 0.12.0, you can replace the built-in template by copying the template to a folder called `default`. The `choco new` command will then use that by default.
 
-Chocolatey CLI version 0.12.0 or later introduced the [`choco template` command](xref:choco-command-template). You can use it to list the installed templates and [set the `defaultTemplateName`](xref:configuration#general) to set the template to be used by default when running the `choco new` command. You can also still copy the template files that worked with previous versions.
+Chocolatey CLI version 0.12.0 or later introduced the <Xref title="`choco template` command" value="choco-command-template" />. You can use it to list the installed templates and <Xref title="set the `defaultTemplateName`" value="configuration" anchor="general" /> to set the template to be used by default when running the `choco new` command. You can also still copy the template files that worked with previous versions.
 
 ### What values can I template?
 

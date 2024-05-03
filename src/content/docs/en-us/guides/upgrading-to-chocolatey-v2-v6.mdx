@@ -36,7 +36,7 @@ When you run the [Chocolatey CLI install command](https://chocolatey.org/install
 
 If you have issues after upgrading to the 2.x and 6.x versions of Chocolatey products, please see the [support options available](#what-should-you-do-if-you-have-questions).
 
-Before downgrading from 2.x and 6.x to 1.x and 5.x of Chocolatey products, please ensure that you understand the [Support Lifecycle](xref:chocolatey-components-dependencies-and-support-lifecycle). If you still want to downgrade, follow the steps below:
+Before downgrading from 2.x and 6.x to 1.x and 5.x of Chocolatey products, please ensure that you understand the <Xref title="Support Lifecycle" value="chocolatey-components-dependencies-and-support-lifecycle" />. If you still want to downgrade, follow the steps below:
 
 1. If you have Chocolatey GUI and / or Chocolatey GUI Licensed Extension, then uninstall them by running `choco uninstall chocolateygui.extension chocolateygui` from an elevated session.
 1. This step requires you to downgrade products depending on what you have installed.
@@ -61,9 +61,9 @@ This is [discussed in more depth later](#side-by-side-installs-have-been-removed
 
 > :choco-note: **NOTE**
 >
-> **Important information for package maintainers.** The `ChocolateyPackageVersion` [environment variable](xref:powershell-reference#environment-variables) follows the below version normalization. If your package scripts use this variable, and the version specified in the package `.nuspec` file falls outside the normalized format, then they may not behave as expected. We recommend using specific version numbers within your scripts rather depending on these environment variables.
+> **Important information for package maintainers.** The `ChocolateyPackageVersion` <Xref title="environment variable" value="powershell-reference" anchor="environment-variables" /> follows the below version normalization. If your package scripts use this variable, and the version specified in the package `.nuspec` file falls outside the normalized format, then they may not behave as expected. We recommend using specific version numbers within your scripts rather depending on these environment variables.
 
-Due to newer semantic version requirements imposed by the NuGet libraries, some version numbers may appear differently than they did in Chocolatey CLI v1.x. Chocolatey CLI 2.0.0 and later will [normalize version numbers](xref:version-normalization) to comply with these new requirements.
+Due to newer semantic version requirements imposed by the NuGet libraries, some version numbers may appear differently than they did in Chocolatey CLI v1.x. Chocolatey CLI 2.0.0 and later will <Xref title="normalize version numbers" value="version-normalization" /> to comply with these new requirements.
 
 ### Optimizing Performance
 
@@ -77,13 +77,13 @@ Please subscribe to [this GitHub issue](https://github.com/chocolatey/choco/issu
 
 As this is a major release, there are breaking changes, bug fixes, features and quality of life improvements, that you should be aware of _before upgrading_. We have only included those changes that we believe affects our customers and community. Not every change has been included.
 
-[Read the overview of changes](xref:choco-new-in-v2), or you can read the release notes for a detailed list of changes in each product:
+<Xref title="Read the overview of changes" value="choco-new-in-v2" />, or you can read the release notes for a detailed list of changes in each product:
 
-* [Chocolatey CLI](xref:choco-release-notes#may-31-2023)
-* [Chocolatey Licensed Extension](xref:licensed-extension-release-notes#may-31-2023)
-* [Chocolatey Agent](xref:agent-release-notes#may-31-2023)
-* [Chocolatey GUI](xref:chocolateygui-release-notes#may-31-2023)
-* [Chocolatey GUI Licensed Extension](xref:chocolatey-gui-licensed-extension-release-notes#may-31-2023)
+* <Xref title="Chocolatey CLI" value="choco-release-notes" anchor="may-31-2023" />
+* <Xref title="Chocolatey Licensed Extension" value="licensed-extension-release-notes" anchor="may-31-2023" />
+* <Xref title="Chocolatey Agent" value="agent-release-notes" anchor="may-31-2023" />
+* <Xref title="Chocolatey GUI" value="chocolateygui-release-notes" anchor="may-31-2023" />
+* <Xref title="Chocolatey GUI Licensed Extension" value="chocolatey-gui-licensed-extension-release-notes" anchor="may-31-2023" />
 
 ### .NET Framework 4.8 Required
 
@@ -93,7 +93,7 @@ The Chocolatey CLI installation process will try to install .NET Framework 4.8 i
 
 We recommend you install .NET Framework 4.8 and reboot, before installing or upgrading to Chocolatey CLI v2.0.0. If you are installing Chocolatey in a Docker container, please use an image that already has .NET 4.8 installed or use the [official Chocolatey CLI Docker image](https://hub.docker.com/r/chocolatey/choco).
 
-If you are unable to upgrade to .NET Framework 4.8, **we do not recommend** you upgrade to Chocolatey CLI version 2.0.0 at this time. Please see our [Support Lifecycle](xref:chocolatey-components-dependencies-and-support-lifecycle) for Chocolatey products.
+If you are unable to upgrade to .NET Framework 4.8, **we do not recommend** you upgrade to Chocolatey CLI version 2.0.0 at this time. Please see our <Xref title="Support Lifecycle" value="chocolatey-components-dependencies-and-support-lifecycle" /> for Chocolatey products.
 
 ### NuGet v3 Feed Support Added
 
@@ -117,7 +117,7 @@ We have added support for [SemVer 2.0.0](https://semver.org/spec/v2.0.0.html) th
 
 ### Supported Operating Systems
 
-We have clarified the Operating Systems we support and updated our [Support Lifecycle](xref:chocolatey-components-dependencies-and-support-lifecycle) documentation.
+We have clarified the Operating Systems we support and updated our <Xref title="Support Lifecycle" value="chocolatey-components-dependencies-and-support-lifecycle" /> documentation.
 
 ### Side-By-Side Installs Have Been Removed
 
@@ -136,7 +136,7 @@ In the example above, `gitreleasemanager.portable` has two versions installed: 0
 
 Once this is complete, you can install the package again, without side-by-side, by running `choco install gitreleasemanager.portable`.
 
-If you need side-by-side functionality, or cannot uninstall packages installed side-by-side, **we do not recommend** you upgrade to Chocolatey CLI version 2.0.0 at this time. If you are able to put in some extra work, we [have documented an option that may work for you](xref:create-packages#naming-packages-to-allow-for-side-by-side-installation). Please see our [Support Lifecycle](xref:chocolatey-components-dependencies-and-support-lifecycle) for Chocolatey products.
+If you need side-by-side functionality, or cannot uninstall packages installed side-by-side, **we do not recommend** you upgrade to Chocolatey CLI version 2.0.0 at this time. If you are able to put in some extra work, we <Xref title="have documented an option that may work for you" value="create-packages" anchor="naming-packages-to-allow-for-side-by-side-installation" />. Please see our <Xref title="Support Lifecycle" value="chocolatey-components-dependencies-and-support-lifecycle" /> for Chocolatey products.
 
 ### The List Command Now Lists Local Packages Only and the `--local-only` and `-lo` Options Have Been Removed
 
@@ -167,7 +167,7 @@ To ensure we do not break any existing automation, integrations or scripts using
 
 ### The List Command Cannot Be Used to Query Remote Sources
 
-While the `choco list` command is still used to query [alternative sources](xref:choco-command-install#alternative-sources), it cannot be used to query remote sources. You must instead use the `choco search` command to query these remote sources. If you are currently using the `choco list` command for this, you must use `choco search`. If you are using `--limit-output` or `-r` as part of your command, this will continue to behave as normal. For example, if you used `choco list --source="'<SOURCE URL>'"`, you should use `choco search --source="'<SOURCE URL>'"` instead.
+While the `choco list` command is still used to query <Xref title="alternative sources" value="choco-command-install" anchor="alternative-sources" />, it cannot be used to query remote sources. You must instead use the `choco search` command to query these remote sources. If you are currently using the `choco list` command for this, you must use `choco search`. If you are using `--limit-output` or `-r` as part of your command, this will continue to behave as normal. For example, if you used `choco list --source="'<SOURCE URL>'"`, you should use `choco search --source="'<SOURCE URL>'"` instead.
 
 Please ensure you replace `choco list` with `choco search` in your automations and scripts as these will no longer work.
 
@@ -296,9 +296,9 @@ The Chocolatey 2.0.0 and 6.0.0 pre-release versions were not recommended for pro
 >
 > If you need to specify a `--source` option in the Advanced Deployment Step PowerShell script, please make sure you reference only one source value. For example, `--source="'my-internal-repo'"` and not `--source="'my-internal-repo;chocolatey.licensed'"`. Specifying multiple sources for this specific upgrade may cause the Chocolatey product packages to not be found. Note that this only affects the upgrade to version 2.0.0 or 6.0.0 of the Chocolatey products and not future packages you may install or upgrade.
 
-1. In Chocolatey Central Management, ensure you have a group of computers to deploy to, and if necessary [create one](xref:ccm-groups).
+1. In Chocolatey Central Management, ensure you have a group of computers to deploy to, and if necessary <Xref title="create one" value="ccm-groups" />.
 
-1. [Create an Advanced Deployment Step](xref:ccm-deployments) with the group of computers to deploy the upgrade to the latest stable 1.x and 5.x versions of Chocolatey products. The Deployment Plan will have 2 steps:
+1. <Xref title="Create an Advanced Deployment Step" value="ccm-deployments" /> with the group of computers to deploy the upgrade to the latest stable 1.x and 5.x versions of Chocolatey products. The Deployment Plan will have 2 steps:
 
     1. The first Deployment Step will upgrade Chocolatey Agent and it's required dependencies. As communication with Chocolatey Central Management takes place through Chocolatey Agent, we need to ensure the service is running and so the upgrade is done by a Windows scheduled task. The Advanced Deployment Step PowerShell script should be:
 
@@ -321,7 +321,7 @@ The Chocolatey 2.0.0 and 6.0.0 pre-release versions were not recommended for pro
     Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "restart chocolatey-agent" -Description "Upgrade Chocolatey Agent" -Principal $principal -Settings $settings -Verbose:$false
     ```
 
-    If you use an internal repository, change the `--source="'chocolatey.licensed'"` on line 4 of the script above, to your internal repository location. For further information see the [documentation on upgrading Chocolatey Agent using Chocolatey Central Management](xref:upgrade-agent#using-chocolatey-central-management-to-upgrade-chocolatey-agent).
+    If you use an internal repository, change the `--source="'chocolatey.licensed'"` on line 4 of the script above, to your internal repository location. For further information see the <Xref title="documentation on upgrading Chocolatey Agent using Chocolatey Central Management" value="upgrade-agent" anchor="using-chocolatey-central-management-to-upgrade-chocolatey-agent" />.
 
     2. The second Deployment Step ensures that all other Chocolatey products are now at their latest 1.x and 5.x versions. The Advanced Deployment Step PowerShell script should be `choco upgrade chocolatey --version 1.4.0 --source="'chocolatey.licensed'"`. If you use an internal repository, change the `--source="'chocolatey.licensed'"` in the command, to your internal repository location.
 
@@ -335,9 +335,9 @@ Once the Deployment Plan is complete, move on to the next step.
 
 Once you have completed step 1 above, you will be ready to start the upgrade to the latest version of Chocolatey products:
 
-1. Using the same group used in Step 1 above, create an [Advanced Deployment Plan](xref:ccm-deployments) with two Deployment Steps:
+1. Using the same group used in Step 1 above, create an <Xref title="Advanced Deployment Plan" value="ccm-deployments" /> with two Deployment Steps:
 
-    1. The first Deployment Step will upgrade Chocolatey Agent through a Windows scheduled task. Add the [recommended code](xref:upgrade-agent#using-chocolatey-central-management-to-upgrade-chocolatey-agent) as the PowerShell script. Note that this code is different from above. If you use an internal repository, change the `--source 'chocolatey.licensed'` in the command, to your internal repository location.
+    1. The first Deployment Step will upgrade Chocolatey Agent through a Windows scheduled task. Add the <Xref title="recommended code" value="upgrade-agent" anchor="using-chocolatey-central-management-to-upgrade-chocolatey-agent" /> as the PowerShell script. Note that this code is different from above. If you use an internal repository, change the `--source 'chocolatey.licensed'` in the command, to your internal repository location.
 
     1. The second Deployment Step ensures that all other Chocolatey products are now at their latest stable 2.0.0 and 6.0.0 versions. The Advanced Deployment Step PowerShell script should be `choco upgrade chocolatey --source="'chocolatey.licensed'"`. If you use an internal repository, change the `--source="'chocolatey.licensed'"` in the command, to your internal repository location.
 
@@ -349,7 +349,7 @@ Once the Deployment Plan is complete, all Chocolatey products will be upgraded t
 >
 > We recommend that you test the upgrade process on a small sample of non-production computers to ensure it works for your environment and that you are comfortable with it. _Always_ test any upgrades on a small sample of computers before deploying to a wider group, or to production.
 
-Please see the specific documentation on [upgrading Chocolatey products with Intune](xref:intune-upgrade).
+Please see the specific documentation on <Xref title="upgrading Chocolatey products with Intune" value="intune-upgrade" />.
 
 ### Other Integrations
 

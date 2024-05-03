@@ -14,7 +14,7 @@ redirectFrom:
 
 ## Summary
 
-In your Chocolatey packaging, you have the ability to use these functions (and others with Chocolatey's [PowerShell Extensions](xref:extensions)) to work with all aspects of software management. Keep in mind Chocolatey's automation scripts are just PowerShell, so you can do manage anything you want.
+In your Chocolatey packaging, you have the ability to use these functions (and others with Chocolatey's <Xref title="PowerShell Extensions" value="extensions" />) to work with all aspects of software management. Keep in mind Chocolatey's automation scripts are just PowerShell, so you can do manage anything you want.
 
 > :choco-info: **NOTE**
 >
@@ -22,12 +22,12 @@ In your Chocolatey packaging, you have the ability to use these functions (and o
 
 ## Main Functions
 
-These functions call other functions and many times may be the only thing you need in your [chocolateyInstall.ps1 file](xref:chocolatey-install-ps1).
+These functions call other functions and many times may be the only thing you need in your <Xref title="chocolateyInstall.ps1 file" value="chocolatey-install-ps1" />.
 
-* [Install-ChocolateyPackage](xref:install-chocolateypackage)
-* [Install-ChocolateyZipPackage](xref:install-chocolateyzippackage)
-* [Install-ChocolateyPowershellCommand](xref:install-chocolateypowershellcommand)
-* [Install-ChocolateyVsixPackage](xref:install-chocolateyvsixpackage)
+* <Xref title="Install-ChocolateyPackage" value="install-chocolateypackage" />
+* <Xref title="Install-ChocolateyZipPackage" value="install-chocolateyzippackage" />
+* <Xref title="Install-ChocolateyPowershellCommand" value="install-chocolateypowershellcommand" />
+* <Xref title="Install-ChocolateyVsixPackage" value="install-chocolateyvsixpackage" />
 
 ## More Functions
 
@@ -35,13 +35,13 @@ These functions call other functions and many times may be the only thing you ne
 
 When creating packages that need to run one of the following commands below, one should add the tag `admin` to the nuspec.
 
-* [Install-ChocolateyPackage](xref:install-chocolateypackage)
-* [Start-ChocolateyProcessAsAdmin](xref:start-chocolateyprocessasadmin)
-* [Install-ChocolateyInstallPackage](xref:install-chocolateyinstallpackage)
-* [Install-ChocolateyPath](xref:install-chocolateypath) - when specifying machine path
-* [Install-ChocolateyEnvironmentVariable](xref:install-chocolateyenvironmentvariable) - when specifying machine path
-* [Install-ChocolateyExplorerMenuItem](xref:install-chocolateyexplorermenuitem)
-* [Install-ChocolateyFileAssociation](xref:install-chocolateyfileassociation)
+* <Xref title="Install-ChocolateyPackage" value="install-chocolateypackage" />
+* <Xref title="Start-ChocolateyProcessAsAdmin" value="start-chocolateyprocessasadmin" />
+* <Xref title="Install-ChocolateyInstallPackage" value="install-chocolateyinstallpackage" />
+* <Xref title="Install-ChocolateyPath" value="install-chocolateypath" /> - when specifying machine path
+* <Xref title="Install-ChocolateyEnvironmentVariable" value="install-chocolateyenvironmentvariable" /> - when specifying machine path
+* <Xref title="Install-ChocolateyExplorerMenuItem" value="install-chocolateyexplorermenuitem" />
+* <Xref title="Install-ChocolateyFileAssociation" value="install-chocolateyfileassociation" />
 
 ### Non-Administrator Safe Functions
 
@@ -49,68 +49,68 @@ When you have a need to run Chocolatey without Administrative access required (n
 
 These are the functions from above as one list.
 
-* [Install-ChocolateyZipPackage](xref:install-chocolateyzippackage)
-* [Install-ChocolateyPowershellCommand](xref:install-chocolateypowershellcommand)
-* [Get-ChocolateyPath](xref:get-chocolateypath)
-* [Get-ChocolateyWebFile](xref:get-chocolateywebfile)
-* [Get-ChocolateyUnzip](xref:get-chocolateyunzip)
-* [Install-ChocolateyPath](xref:install-chocolateypath) - when specifying user path
-* [Install-ChocolateyEnvironmentVariable](xref:install-chocolateyenvironmentvariable) - when specifying user path
-* [Install-ChocolateyPinnedTaskBarItem](xref:install-chocolateypinnedtaskbaritem)
-* [Install-ChocolateyShortcut](xref:install-chocolateyshortcut)
-* [Update-SessionEnvironment](xref:update-sessionenvironment)
-* [Get-PackageParameters](xref:get-packageparameters)
+* <Xref title="Install-ChocolateyZipPackage" value="install-chocolateyzippackage" />
+* <Xref title="Install-ChocolateyPowershellCommand" value="install-chocolateypowershellcommand" />
+* <Xref title="Get-ChocolateyPath" value="get-chocolateypath" />
+* <Xref title="Get-ChocolateyWebFile" value="get-chocolateywebfile" />
+* <Xref title="Get-ChocolateyUnzip" value="get-chocolateyunzip" />
+* <Xref title="Install-ChocolateyPath" value="install-chocolateypath" /> - when specifying user path
+* <Xref title="Install-ChocolateyEnvironmentVariable" value="install-chocolateyenvironmentvariable" /> - when specifying user path
+* <Xref title="Install-ChocolateyPinnedTaskBarItem" value="install-chocolateypinnedtaskbaritem" />
+* <Xref title="Install-ChocolateyShortcut" value="install-chocolateyshortcut" />
+* <Xref title="Update-SessionEnvironment" value="update-sessionenvironment" />
+* <Xref title="Get-PackageParameters" value="get-packageparameters" />
 
 ## Complete List (alphabetical order)
 
- * [Format-FileSize](xref:format-filesize)
- * [Get-ChecksumValid](xref:get-checksumvalid)
- * [Get-ChocolateyConfigValue](xref:get-chocolateyconfigvalue)
- * [Get-ChocolateyPath](xref:get-chocolateypath)
- * [Get-ChocolateyUnzip](xref:get-chocolateyunzip)
- * [Get-ChocolateyWebFile](xref:get-chocolateywebfile)
- * [Get-EnvironmentVariable](xref:get-environmentvariable)
- * [Get-EnvironmentVariableNames](xref:get-environmentvariablenames)
- * [Get-FtpFile](xref:get-ftpfile)
- * [Get-OSArchitectureWidth](xref:get-osarchitecturewidth)
- * [Get-PackageParameters](xref:get-packageparameters)
- * [Get-ToolsLocation](xref:get-toolslocation)
- * [Get-UACEnabled](xref:get-uacenabled)
- * [Get-UninstallRegistryKey](xref:get-uninstallregistrykey)
- * [Get-VirusCheckValid](xref:get-viruscheckvalid)
- * [Get-WebFile](xref:get-webfile)
- * [Get-WebFileName](xref:get-webfilename)
- * [Get-WebHeaders](xref:get-webheaders)
- * [Install-BinFile](xref:install-binfile)
- * [Install-ChocolateyEnvironmentVariable](xref:install-chocolateyenvironmentvariable)
- * [Install-ChocolateyExplorerMenuItem](xref:install-chocolateyexplorermenuitem)
- * [Install-ChocolateyFileAssociation](xref:install-chocolateyfileassociation)
- * [Install-ChocolateyInstallPackage](xref:install-chocolateyinstallpackage)
- * [Install-ChocolateyPackage](xref:install-chocolateypackage)
- * [Install-ChocolateyPath](xref:install-chocolateypath)
- * [Install-ChocolateyPinnedTaskBarItem](xref:install-chocolateypinnedtaskbaritem)
- * [Install-ChocolateyPowershellCommand](xref:install-chocolateypowershellcommand)
- * [Install-ChocolateyShortcut](xref:install-chocolateyshortcut)
- * [Install-ChocolateyVsixPackage](xref:install-chocolateyvsixpackage)
- * [Install-ChocolateyZipPackage](xref:install-chocolateyzippackage)
- * [Install-Vsix](xref:install-vsix)
- * [Set-EnvironmentVariable](xref:set-environmentvariable)
- * [Set-PowerShellExitCode](xref:set-powershellexitcode)
- * [Start-ChocolateyProcessAsAdmin](xref:start-chocolateyprocessasadmin)
- * [Test-ProcessAdminRights](xref:test-processadminrights)
- * [Uninstall-BinFile](xref:uninstall-binfile)
- * [Uninstall-ChocolateyEnvironmentVariable](xref:uninstall-chocolateyenvironmentvariable)
- * [Uninstall-ChocolateyPackage](xref:uninstall-chocolateypackage)
- * [Uninstall-ChocolateyZipPackage](xref:uninstall-chocolateyzippackage)
- * [Update-SessionEnvironment](xref:update-sessionenvironment)
- * [Write-FunctionCallLogMessage](xref:write-functioncalllogmessage)
+ * <Xref title="Format-FileSize" value="format-filesize" />
+ * <Xref title="Get-ChecksumValid" value="get-checksumvalid" />
+ * <Xref title="Get-ChocolateyConfigValue" value="get-chocolateyconfigvalue" />
+ * <Xref title="Get-ChocolateyPath" value="get-chocolateypath" />
+ * <Xref title="Get-ChocolateyUnzip" value="get-chocolateyunzip" />
+ * <Xref title="Get-ChocolateyWebFile" value="get-chocolateywebfile" />
+ * <Xref title="Get-EnvironmentVariable" value="get-environmentvariable" />
+ * <Xref title="Get-EnvironmentVariableNames" value="get-environmentvariablenames" />
+ * <Xref title="Get-FtpFile" value="get-ftpfile" />
+ * <Xref title="Get-OSArchitectureWidth" value="get-osarchitecturewidth" />
+ * <Xref title="Get-PackageParameters" value="get-packageparameters" />
+ * <Xref title="Get-ToolsLocation" value="get-toolslocation" />
+ * <Xref title="Get-UACEnabled" value="get-uacenabled" />
+ * <Xref title="Get-UninstallRegistryKey" value="get-uninstallregistrykey" />
+ * <Xref title="Get-VirusCheckValid" value="get-viruscheckvalid" />
+ * <Xref title="Get-WebFile" value="get-webfile" />
+ * <Xref title="Get-WebFileName" value="get-webfilename" />
+ * <Xref title="Get-WebHeaders" value="get-webheaders" />
+ * <Xref title="Install-BinFile" value="install-binfile" />
+ * <Xref title="Install-ChocolateyEnvironmentVariable" value="install-chocolateyenvironmentvariable" />
+ * <Xref title="Install-ChocolateyExplorerMenuItem" value="install-chocolateyexplorermenuitem" />
+ * <Xref title="Install-ChocolateyFileAssociation" value="install-chocolateyfileassociation" />
+ * <Xref title="Install-ChocolateyInstallPackage" value="install-chocolateyinstallpackage" />
+ * <Xref title="Install-ChocolateyPackage" value="install-chocolateypackage" />
+ * <Xref title="Install-ChocolateyPath" value="install-chocolateypath" />
+ * <Xref title="Install-ChocolateyPinnedTaskBarItem" value="install-chocolateypinnedtaskbaritem" />
+ * <Xref title="Install-ChocolateyPowershellCommand" value="install-chocolateypowershellcommand" />
+ * <Xref title="Install-ChocolateyShortcut" value="install-chocolateyshortcut" />
+ * <Xref title="Install-ChocolateyVsixPackage" value="install-chocolateyvsixpackage" />
+ * <Xref title="Install-ChocolateyZipPackage" value="install-chocolateyzippackage" />
+ * <Xref title="Install-Vsix" value="install-vsix" />
+ * <Xref title="Set-EnvironmentVariable" value="set-environmentvariable" />
+ * <Xref title="Set-PowerShellExitCode" value="set-powershellexitcode" />
+ * <Xref title="Start-ChocolateyProcessAsAdmin" value="start-chocolateyprocessasadmin" />
+ * <Xref title="Test-ProcessAdminRights" value="test-processadminrights" />
+ * <Xref title="Uninstall-BinFile" value="uninstall-binfile" />
+ * <Xref title="Uninstall-ChocolateyEnvironmentVariable" value="uninstall-chocolateyenvironmentvariable" />
+ * <Xref title="Uninstall-ChocolateyPackage" value="uninstall-chocolateypackage" />
+ * <Xref title="Uninstall-ChocolateyZipPackage" value="uninstall-chocolateyzippackage" />
+ * <Xref title="Update-SessionEnvironment" value="update-sessionenvironment" />
+ * <Xref title="Write-FunctionCallLogMessage" value="write-functioncalllogmessage" />
 
 ## Chocolatey for Business Functions
 
- * [Install-ChocolateyWindowsService](xref:install-chocolateywindowsservice)
- * [Start-ChocolateyWindowsService](xref:start-chocolateywindowsservice)
- * [Stop-ChocolateyWindowsService](xref:stop-chocolateywindowsservice)
- * [Uninstall-ChocolateyWindowsService](xref:uninstall-chocolateywindowsservice)
+ * <Xref title="Install-ChocolateyWindowsService" value="install-chocolateywindowsservice" />
+ * <Xref title="Start-ChocolateyWindowsService" value="start-chocolateywindowsservice" />
+ * <Xref title="Stop-ChocolateyWindowsService" value="stop-chocolateywindowsservice" />
+ * <Xref title="Uninstall-ChocolateyWindowsService" value="uninstall-chocolateywindowsservice" />
 
 ## Variables
 
@@ -126,7 +126,7 @@ Chocolatey makes a number of environment variables available (You can access any
  * ChocolateyPackageTitle - The title of the package, equivalent to the `<title />` field in the nuspec.
  * ChocolateyPackageVersion - The version of the package.
    * Prior to Chocolatey CLI version 2.1.0 this is equivalent to the `<version />` field in the nuspec.
-   * Starting with Chocolatey CLI version 2.1.0 this is equivalent to the [normalized version](xref:upgrading-to-chocolatey-v2-v6#package-version-normalization) of the `<version />` field in the nuspec.
+   * Starting with Chocolatey CLI version 2.1.0 this is equivalent to the <Xref title="normalized version" value="upgrading-to-chocolatey-v2-v6" anchor="package-version-normalization" /> of the `<version />` field in the nuspec.
    * If you rely on `ChocolateyPackageVersion` in a URL, ensure that all possible permutations of the package version work (eg: `1.0.0.0`, `1.0.0`, `1.0`, `1.0.00.0`).
 
 #### Advanced Environment Variables

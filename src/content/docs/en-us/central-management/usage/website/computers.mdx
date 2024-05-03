@@ -23,7 +23,7 @@ Client computers (agents) will show up in Central Management automatically as lo
 1. The `centralManagementServiceUrl` is set correctly in the chocolatey configuration file (typically to `https://<FQDN_to_CCM_service_host>:24020/ChocolateyManagementService`)
 1. The client has access to the above URL (this may require opening the port in your firewall, etc.) so that it can resolve the SSL certificate necessary to communicate with the CCM service.
 
-Please see [Central Management Client Setup](xref:ccm-client) for more details and setup.
+Please see <Xref title="Central Management Client Setup" value="ccm-client" /> for more details and setup.
 
 ## Viewing Installed Software on a Computer
 
@@ -63,9 +63,9 @@ The Deployment Plan can be saved without adding a script command, however it wil
 
 ![Red popover warning on Deployment Step with ineligible deployment message](/images/ccm-playwright/deployment-plans/edit/popover-ineligible-step.png)
 
-After adding a script command to the Deployment Step, the Deployment Plan can be deployed as outlined in the [Deployment Plans documentation](xref:ccm-deployments).
+After adding a script command to the Deployment Step, the Deployment Plan can be deployed as outlined in the <Xref title="Deployment Plans documentation" value="ccm-deployments" />.
 
-From here, the Deployment Plan can be edited and deployed as outlined in the [Deployment Plans documentation](xref:ccm-deployments).
+From here, the Deployment Plan can be edited and deployed as outlined in the <Xref title="Deployment Plans documentation" value="ccm-deployments" />.
 
 ## Upgrading All Outdated Software on a Computer
 
@@ -83,9 +83,9 @@ Clicking this option will create a New Deployment Plan. This Deployment Plan wil
 
 ![Automatically created Deployment Plan showing Deployment Steps](/images/ccm-playwright/deployment-plans/edit/computers-upgrade-outdated-software.png)
 
-Each Deployment Step has a [Temporary Group](xref:ccm-groups#temporary-groups) selected that contains the Computer, and the script command automatically entered.
+Each Deployment Step has a <Xref title="Temporary Group" value="ccm-groups" anchor="temporary-groups" /> selected that contains the Computer, and the script command automatically entered.
 
-From here, the Deployment Plan can be edited and deployed as outlined in the [Deployment Plans documentation](xref:ccm-deployments).
+From here, the Deployment Plan can be edited and deployed as outlined in the <Xref title="Deployment Plans documentation" value="ccm-deployments" />.
 
 ## Exporting a `packages.config` file for a computer
 
@@ -116,11 +116,11 @@ You need to check the CCM service logs. The agent will always report success whe
 
 The logs are located at `$env:ChocolateyInstall\logs\ccm-service.log`. If you are on a version of CCM prior to 0.2.0, the log will be located at `$env:ChocolateyInstall\lib\chocolatey-management-service\tools\service\logs\chocolatey.service.host.log`.
 
-For more common errors related to checking in, see the [setup section (and component setup sub-sections)](xref:ccm-setup) as they dive deeper into common errors and resolutions related to things such as this.
+For more common errors related to checking in, see the <Xref title="setup section (and component setup sub-sections)" value="ccm-setup" /> as they dive deeper into common errors and resolutions related to things such as this.
 
 ## Related Topics
 
-* [Chocolatey Central Management](xref:central-management)
-* [Central Management - Software](xref:ccm-software)
-* [Central Management - Groups](xref:ccm-groups)
-* [Central Management - Reports](xref:ccm-reports)
+* <Xref title="Chocolatey Central Management" value="central-management" />
+* <Xref title="Central Management - Software" value="ccm-software" />
+* <Xref title="Central Management - Groups" value="ccm-groups" />
+* <Xref title="Central Management - Reports" value="ccm-reports" />

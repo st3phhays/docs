@@ -19,7 +19,7 @@ The ability to push Chocolatey Intune packages (packages with the extension `.in
 choco push <path to intune pkg> [<options/switches>]
 ~~~
 
-When using the `push` command the package path provided must be an `.intunewin` file that was previously converted to a Chocolatey Intune package using the [`convert`](xref:intune-convert) command. This will push the Chocolatey Intune package, and its dependencies if they do not already exist there, to the Intune tenant.
+When using the `push` command the package path provided must be an `.intunewin` file that was previously converted to a Chocolatey Intune package using the <Xref title="`convert`" value="intune-convert" /> command. This will push the Chocolatey Intune package, and its dependencies if they do not already exist there, to the Intune tenant.
 
 ### Context Menu
 
@@ -55,7 +55,7 @@ choco push firefox.86.0.intunewin
 
 > :choco-warning: **WARNING**
 >
-> By specifying the path to a pre-release package, pre-release support will be enabled for the package and its dependencies. However, while the package you are pushing can be a pre-release, you cannot have a dependency on a pre-release package if the Chocolatey package you are pushing is a stable release. This is the same behaviour as the [`convert`](xref:intune-convert) command.
+> By specifying the path to a pre-release package, pre-release support will be enabled for the package and its dependencies. However, while the package you are pushing can be a pre-release, you cannot have a dependency on a pre-release package if the Chocolatey package you are pushing is a stable release. This is the same behaviour as the <Xref title="`convert`" value="intune-convert" /> command.
 
 > :choco-warning: **WARNING**
 >
@@ -67,4 +67,4 @@ choco push firefox.86.0.intunewin
 
 ## FAQ
 
-Frequently asked questions about choco push for Intune can be found [here](xref:intune-faq#push-faqs)
+Frequently asked questions about choco push for Intune can be found <Xref title="here" value="intune-faq" anchor="push-faqs" />

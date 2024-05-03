@@ -42,7 +42,7 @@ This guide will be written as if you were using Ansible from a local installatio
 
 > :choco-info: **NOTE**
 >
-> If you want to run this deployment on an environment that doesn't have access to the internet, refer to the [offline deployment](xref:c4b-ansible-offline-deployment) page and start on a Windows machine.
+> If you want to run this deployment on an environment that doesn't have access to the internet, refer to the <Xref title="offline deployment" value="c4b-ansible-offline-deployment" /> page and start on a Windows machine.
 
 ### Setup
 
@@ -125,7 +125,7 @@ For further details on defining Windows hosts in Ansible, see [this blog post](h
 
 You can provide a connection string to the environment to use for storing Chocolatey Central Management data. This can have significant benefits for performance, as well as simplifying backups and load-balancing of instances.
 
-To use an existing database server you wish to use, follow the instructions for [creating a database](xref:ccm-database) and provide the connection string as a variable.
+To use an existing database server you wish to use, follow the instructions for <Xref title="creating a database" value="ccm-database" /> and provide the connection string as a variable.
 
 ### Setting Secrets
 
@@ -200,7 +200,7 @@ The playbook will prompt you for the location of your license, certificate, and 
 
 > :choco-warning: **WARNING**
 >
-> You cannot create users in Chocolatey Central Management until you have configured an SMTP server. To do this, please see [how to configure SMTP](xref:ccm-website#step-4.2-smtp-configuration).
+> You cannot create users in Chocolatey Central Management until you have configured an SMTP server. To do this, please see <Xref title="how to configure SMTP" value="ccm-website" anchor="step-4.2-smtp-configuration" />.
 > You can log in to Chocolatey Central Management using the credentials provided in the credentials document (see [Accessing Services](#accessing-services), below).
 
 ## Accessing Services

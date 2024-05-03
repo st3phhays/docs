@@ -11,16 +11,16 @@ Once you have your Chocolatey for Business environment deployed, you'll need to 
 To do that, you'll need to do the following on the clients:
 
 1. Ensure the client machine can access the Chocolatey Central Management service on port 24020, and the Sonatype Nexus service on 8443 (by default).
-1. **If your certificate is self-signed:** [Install the SSL/TLS certificate](xref:c4b-azure-client-setup#ssl-certificate).
-1. [Install Chocolatey components and configure the client for Chocolatey for Business](xref:c4b-ansible-client-setup#client-setup) (C4B) deployments and management.
+1. **If your certificate is self-signed:** <Xref title="Install the SSL/TLS certificate" value="c4b-azure-client-setup" anchor="ssl-certificate" />.
+1. <Xref title="Install Chocolatey components and configure the client for Chocolatey for Business" value="c4b-ansible-client-setup" anchor="client-setup" /> (C4B) deployments and management.
 
 ## Client Setup
 
 You will need the following values ready when running this script:
 
 * `FQDN`: The fully qualified domain name used to access your environment.
-* `ccm_client_salt`: This is the client-side salt additive. More information about this can be found in the [Config Settings](xref:ccm-client#config-settings) docs. The value will have been provided during the deployment of the Chocolatey for Business environment.
-* `ccm_service_salt`: This is the service salt additive. More information about this can be found in the [Config Settings](xref:ccm-client#config-settings) docs. The value will have been provided during the deployment of the Chocolatey for Business environment.
+* `ccm_client_salt`: This is the client-side salt additive. More information about this can be found in the <Xref title="Config Settings" value="ccm-client" anchor="config-settings" /> docs. The value will have been provided during the deployment of the Chocolatey for Business environment.
+* `ccm_service_salt`: This is the service salt additive. More information about this can be found in the <Xref title="Config Settings" value="ccm-client" anchor="config-settings" /> docs. The value will have been provided during the deployment of the Chocolatey for Business environment.
 * `nexus_password`: The password for the `chocouser` account which is used by the client to access your environments' Sonatype Nexus service. The value will have been provided during the deployment of the Chocolatey for Business environment.
 
 The values generated during the deployment are available in the `CCM.html` file provided in the `credentials` directory within the deployment repository.

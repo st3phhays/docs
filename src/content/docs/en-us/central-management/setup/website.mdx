@@ -16,9 +16,9 @@ This is the Chocolatey Central Management website that gives an API and a web la
 
 > :choco-warning: **WARNING**
 >
-> The [database](xref:ccm-database) must be setup and available, along with [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> The <Xref title="database" value="ccm-database" /> must be setup and available, along with <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
-* [High-level Requirements](xref:ccm-setup#high-level-requirements)
+* <Xref title="High-level Requirements" value="ccm-setup" anchor="high-level-requirements" />
 * PowerShell 5.1
 * IIS Set up and available
 * dotnet-aspnetcoremodule-v2 version 16.0.23055
@@ -85,10 +85,10 @@ This includes (but may not be limited to):
 
 ### Database Authentication Scenarios
 
-* [Scenario 1 - Windows Authentication to Local SQL Server](xref:ccm-website#scenario-one)
-* [Scenario 2 - Active Directory Authentication to Remote SQL Server](xref:ccm-website#scenario-two)
-* [Scenario 3 - SQL Server Authentication to Local SQL Server](xref:ccm-website#scenario-three)
-* [Scenario 4 - SQL Server Authentication to Remote SQL Server](xref:ccm-website#scenario-four)
+* <Xref title="Scenario 1 - Windows Authentication to Local SQL Server" value="ccm-website" anchor="scenario-one" />
+* <Xref title="Scenario 2 - Active Directory Authentication to Remote SQL Server" value="ccm-website" anchor="scenario-two" />
+* <Xref title="Scenario 3 - SQL Server Authentication to Local SQL Server" value="ccm-website" anchor="scenario-three" />
+* <Xref title="Scenario 4 - SQL Server Authentication to Remote SQL Server" value="ccm-website" anchor="scenario-four" />
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -110,7 +110,7 @@ This includes (but may not be limited to):
 
 #### Windows Authentication to Local SQL Server
 
-Monolithic - you have set up the [database](xref:ccm-database) to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to the local database.
+Monolithic - you have set up the <Xref title="database" value="ccm-database" /> to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to the local database.
 
 ##### Specify User
 
@@ -120,7 +120,7 @@ choco install chocolatey-management-web -y --package-parameters="'/ConnectionStr
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the user `<LocalWindowsAccount>` has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the user `<LocalWindowsAccount>` has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 ---
 
@@ -132,7 +132,7 @@ choco install chocolatey-management-web -y --package-parameters="'/ConnectionStr
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the user `IIS APPPOOL\ChocolateyCentralManagement` has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the user `IIS APPPOOL\ChocolateyCentralManagement` has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 > :choco-info: **NOTE**
 >
@@ -143,7 +143,7 @@ choco install chocolatey-management-web -y --package-parameters="'/ConnectionStr
 
 #### Active Directory Authentication to Local SQL Server
 
-Split - you have set up the [database](xref:ccm-database) to use Windows Authentication (or Mixed Mode Authentication). You wish to use an Active Directory account to connect to an existing SQL instance.
+Split - you have set up the <Xref title="database" value="ccm-database" /> to use Windows Authentication (or Mixed Mode Authentication). You wish to use an Active Directory account to connect to an existing SQL instance.
 
 ```powershell
 choco install chocolatey-management-web -y --package-parameters="'/ConnectionString:Server=<RemoteSqlHost>;Database=ChocolateyManagement;Trusted_Connection=True; /Username:<DomainAccount>'" --package-parameters-sensitive="'/Password:<domain account password>'"
@@ -158,7 +158,7 @@ choco install chocolatey-management-web -y --package-parameters="'/ConnectionStr
 
 #### SQL Server Authentication to Local SQL Server
 
-Monolithic - you are installing the management service on the same machine as a SQL Server Express instance. You likely have a smaller environment where you have up to 1,000 machines. You have set up the [database](xref:ccm-database) to use Mixed Mode Authentication.
+Monolithic - you are installing the management service on the same machine as a SQL Server Express instance. You likely have a smaller environment where you have up to 1,000 machines. You have set up the <Xref title="database" value="ccm-database" /> to use Mixed Mode Authentication.
 
 ##### Licensed SQL Server
 
@@ -168,7 +168,7 @@ choco install chocolatey-management-web -y --package-parameters-sensitive="'/Con
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 ---
 
@@ -180,14 +180,14 @@ choco install chocolatey-management-web -y --package-parameters-sensitive="'/Con
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 :::
 :::{.tab-pane .fade #scenario-four role=tabpanel aria-labelledby=scenario-four-tab}
 
 #### SQL Server Authentication to Remote SQL Server
 
-Split - you are installing the management service(s) on a server, and targeting an existing SQL Server instance in your organization. You have set up the [database](xref:ccm-database) to use Mixed Mode Authentication.
+Split - you are installing the management service(s) on a server, and targeting an existing SQL Server instance in your organization. You have set up the <Xref title="database" value="ccm-database" /> to use Mixed Mode Authentication.
 
 ```powershell
 choco install chocolatey-management-web -y --package-parameters-sensitive="'/ConnectionString:Server=<RemoteSqlHost>;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'"
@@ -195,7 +195,7 @@ choco install chocolatey-management-web -y --package-parameters-sensitive="'/Con
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 :::
 ::::
@@ -219,7 +219,7 @@ When you access the Chocolatey Central Management Website you will be prompted t
 
 ### Step 4.2: SMTP Configuration
 
-In order to send email from Chocolatey Central Management, you will need to make sure that [all necessary settings have been configured](xref:ccm-administration-settings-email).
+In order to send email from Chocolatey Central Management, you will need to make sure that <Xref title="all necessary settings have been configured" value="ccm-administration-settings-email" />.
 
 #### `appsettings.json` configuration
 
@@ -270,7 +270,7 @@ Then try accessing the website again.  Any emails that are then sent from Chocol
 
 ### Step 4.3: LDAP Configuration
 
-You may want to allow [authentication against LDAP](xref:ccm-administration-settings-user-management#ldap-configuration) for users that are logging into the Chocolatey Central Management website.
+You may want to allow <Xref title="authentication against LDAP" value="ccm-administration-settings-user-management" anchor="ldap-configuration" /> for users that are logging into the Chocolatey Central Management website.
 
 ### Step 4.4: Application Settings File
 
@@ -299,17 +299,17 @@ Here is a copy of items that can be set. They are not required to be encrypted. 
 
 ### Step 4.5: Audit Retention
 
-You may want to configure the [automatic deletion of audit logs](xref:ccm-administration-settings-retention#audit-retention) that are captured by Chocolatey Central Management website.
+You may want to configure the <Xref title="automatic deletion of audit logs" value="ccm-administration-settings-retention" anchor="audit-retention" /> that are captured by Chocolatey Central Management website.
 
 ### Step 4.6: Stale Computer Retention
 
 
-You may want to setup the [automatic deletion of computers](xref:ccm-administration-settings-retention#stale-computer-retention) that are no longer reporting into Chocolatey Central Management.
+You may want to setup the <Xref title="automatic deletion of computers" value="ccm-administration-settings-retention" anchor="stale-computer-retention" /> that are no longer reporting into Chocolatey Central Management.
 
 
 ### Step 4.7: Set up Two Factor Login
 
-You may want to setup [two factor login](xref:ccm-administration-settings-security#two-factor-login) for users who are going to be logging into the Chocolatey Central Management website.
+You may want to setup <Xref title="two factor login" value="ccm-administration-settings-security" anchor="two-factor-login" /> for users who are going to be logging into the Chocolatey Central Management website.
 
 ## FAQ
 
@@ -347,7 +347,7 @@ Currently, no.  The Chocolatey Central Management Website expects to reside at t
 
 ### What is the Chocolatey Central Management Component Compatibility Matrix?
 
-Chocolatey Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of Chocolatey Central Management and vice versa.  Please see the [Chocolatey Central Management Component Compatibility Matrix](xref:central-management#ccm-component-compatibility-matrix) for details.
+Chocolatey Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of Chocolatey Central Management and vice versa.  Please see the <Xref title="Chocolatey Central Management Component Compatibility Matrix" value="central-management" anchor="ccm-component-compatibility-matrix" /> for details.
 
 ### I entered incorrect database details on install, do I need to reinstall to fix that?
 
@@ -514,7 +514,7 @@ ERROR 2019-06-14 00:54:03,491 [55   ] Microsoft.AspNetCore.Server.Kestrel      -
 System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it 127.0.0.1:25
 ```
 
-This is caused due to the default SMTP configuration being used by CCM, which is incompatible with the environment.  Chocolatey Central Management, by default, assumes that there is an available SMTP Server available on the current machine, using port 25.  To fix this, follow the [configuration steps](xref:ccm-administration-settings-email).
+This is caused due to the default SMTP configuration being used by CCM, which is incompatible with the environment.  Chocolatey Central Management, by default, assumes that there is an available SMTP Server available on the current machine, using port 25.  To fix this, follow the <Xref title="configuration steps" value="ccm-administration-settings-email" />.
 
 ### Emails sent from Chocolatey Central Management to users have links that contain localhost, rather than the actual Chocolatey Central Management Server name.
 
@@ -609,7 +609,7 @@ Within the Chocolatey Central Management Website, [SignalR](https://dotnet.micro
 
 In all of these cases, we haven't seen any drop in functionality for the notifications that are sent from the Chocolatey Central Management application.  Our suspicion is that there is a timing issue when attempting to make the connection to the SignalR Hub, which is almost immediately rectified.  Due to the fact that SignalR is a 3rd party integration, we do not believe that there is anything that can be done to resolve this problem, and since the functionality continues to work as expected, these errors in the JavaScript console can safely be ignored.
 
-[Central Management Setup](xref:ccm-setup) | [Chocolatey Central Management](xref:central-management)
+<Xref title="Central Management Setup" value="ccm-setup" /> | <Xref title="Chocolatey Central Management" value="central-management" />
 
 [required-config]: #what-is-the-minimum-required-configuration-for-the-appsettingsjson-file
 

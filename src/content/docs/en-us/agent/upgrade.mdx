@@ -69,8 +69,8 @@ Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "restart choc
 If you need to change the username or password of the Chocolatey Agent, you have a few options:
 
 * Change it through the Windows Service Manager
-* Change it during an upgrade by [passing the new username/password to the upgrade command](xref:setup-agent#package-parameters)
-* Change it during an uninstall and reinstall while [passing the new username/password to the install command](xref:setup-agent#package-parameters).
+* Change it during an upgrade by <Xref title="passing the new username/password to the upgrade command" value="setup-agent" anchor="package-parameters" />
+* Change it during an uninstall and reinstall while <Xref title="passing the new username/password to the install command" value="setup-agent" anchor="package-parameters" />.
 
 > :choco-warning: **WARNING**
 >
@@ -100,7 +100,7 @@ Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "Upgrade choc
 
 > :choco-info: **NOTE**
 >
-> Be sure to use [Sensitive Variables](xref:ccm-administration-sensitive-variables) to ensure the username and password don't get added to the Chocolatey logs when using Chocolatey Central Management version 0.7.0 or newer.
+> Be sure to use <Xref title="Sensitive Variables" value="ccm-administration-sensitive-variables" /> to ensure the username and password don't get added to the Chocolatey logs when using Chocolatey Central Management version 0.7.0 or newer.
 
 > :choco-warning: **WARNING**
 >

@@ -160,8 +160,8 @@ Just like in the cases of Puppet, Chef, or other things that run under a Windows
 
 Pick from one of two different methods:
 
-1. Use a LDAP account for the service - you can always run the service under a different user. See [Agent Install Options](xref:setup-agent#chocolatey-agent-install-options).
-1. Give the computer read access to the share - If you are on Active Directory, you can add all computers to a global group and give that group read access to the share. This requires being explicit on that with no nesting. See [explicit permissions to allow local accounts access to file shares](xref:setup-agent#im-having-trouble-seeing-packages-on-a-file-share-source).
+1. Use a LDAP account for the service - you can always run the service under a different user. See <Xref title="Agent Install Options" value="setup-agent" anchor="chocolatey-agent-install-options" />.
+1. Give the computer read access to the share - If you are on Active Directory, you can add all computers to a global group and give that group read access to the share. This requires being explicit on that with no nesting. See <Xref title="explicit permissions to allow local accounts access to file shares" value="setup-agent" anchor="im-having-trouble-seeing-packages-on-a-file-share-source" />.
 
 **Pros:**
 * Easy setup - you are simply creating a file share.
@@ -260,6 +260,6 @@ MSI repackaging is always preferred. At the end of creating that, you have somet
 
 ## Chocolatey Central Management
 
-Chocolatey for Business has centralized reporting and supports endpoint management through [Chocolatey Central Management (CCM)](xref:central-management). On machines that will take advantage of CCM, you will need the Chocolatey Agent installed and properly configured to manage them centrally.
+Chocolatey for Business has centralized reporting and supports endpoint management through <Xref title="Chocolatey Central Management (CCM)" value="central-management" />. On machines that will take advantage of CCM, you will need the Chocolatey Agent installed and properly configured to manage them centrally.
 
-For more information on Central Management, please see [Chocolatey Central Management](xref:central-management).
+For more information on Central Management, please see <Xref title="Chocolatey Central Management" value="central-management" />.

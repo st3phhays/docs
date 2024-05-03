@@ -85,7 +85,7 @@ tl;dr - Yes, completely possible. Use `-y` or turn on `allowGlobalConfirmation`.
 
 Also check out the help menus now - `choco -h`, `choco install -h`
 
-Longer answer, we've moved a little closer towards other package managers for security reasons, where by default we stop and confirm if you are okay with the state change. We always communicate changes in the [release notes](xref:floss-release-notes), so we highly recommend folks scan at least one of those to see anything tagged breaking changes. Always scan from your current version up to the one you are upgrading to so that you catch all changes.
+Longer answer, we've moved a little closer towards other package managers for security reasons, where by default we stop and confirm if you are okay with the state change. We always communicate changes in the <Xref title="release notes" value="floss-release-notes" />, so we highly recommend folks scan at least one of those to see anything tagged breaking changes. Always scan from your current version up to the one you are upgrading to so that you catch all changes.
 
 The one that is the most important right now is the `x.y.z` release (in this case 0.9.9), once we reach v1 we will be fully SemVer compliant and breaking changes will constitute a major version bump (we're still SemVer in a less than v1), so you can scan breaking changes and major new features in an `x` release, new compatible features in a `.y` release, and `.z` releases will only contain compatible fixes for the current release.
 
@@ -135,7 +135,7 @@ Yes, we absolutely support that scenario in Chocolatey for Business. See [Licens
 
 ### Can I use Chocolatey with existing installs?
 
-Fantastic question, see [Can I use Chocolatey with existing software?](xref:why#can-i-use-chocolatey-with-existing-software)
+Fantastic question, see <Xref title="Can I use Chocolatey with existing software?" value="why" anchor="can-i-use-chocolatey-with-existing-software" />
 
 ### What is the default package source repository URL (community feed url)?
 
@@ -155,7 +155,7 @@ With most packages when you already have something installed, the Chocolatey pro
 
 ### Can I override the installation directory?
 
-Yes you can, see [Overriding install directory](xref:getting-started#overriding-default-install-directory-or-other-advanced-install-concepts) and [Ubiquitous Install Directory Option](xref:install-directory-override).
+Yes you can, see <Xref title="Overriding install directory" value="getting-started" anchor="overriding-default-install-directory-or-other-advanced-install-concepts" /> and <Xref title="Ubiquitous Install Directory Option" value="install-directory-override" />.
 
 ### What distinction does Chocolatey make between an installable and a portable application?
 
@@ -232,13 +232,13 @@ A little history - Chocolatey up until 0.9.9 was provided completely written in 
 
 ### Does Chocolatey run on macOS/Linux?
 
-Yes, for creation and maintenance of packages. See [running on non-Windows](xref:non-windows) for more information.
+Yes, for creation and maintenance of packages. See <Xref title="running on non-Windows" value="non-windows" /> for more information.
 
 ## Troubleshooting
 
 ### I'm running into some issue with Chocolatey, packaging, or something else.
 
-See [Troubleshooting](xref:troubleshooting)
+See <Xref title="Troubleshooting" value="troubleshooting" />
 
 ## Organizational Use
 
@@ -248,7 +248,7 @@ Yes, it is. Chocolatey carries a FOSS Apache 2.0 license, which is extremely bus
 
 ### Should my organization depend on (use) the community feed (https://community.chocolatey.org/packages)?
 
-For production-level scenarios, I couldn't justify giving up that level of control and trust to the internet in an organization. It's recommended that you copy and modify existing packages and/or create your own internal packages and host them internally. That way you can completely guarantee that an install/upgrade/uninstall will always work every time. See [Security](xref:security#chocolateyorg-the-community-feed) for more details.
+For production-level scenarios, I couldn't justify giving up that level of control and trust to the internet in an organization. It's recommended that you copy and modify existing packages and/or create your own internal packages and host them internally. That way you can completely guarantee that an install/upgrade/uninstall will always work every time. See <Xref title="Security" value="security" anchor="chocolateyorg-the-community-feed" /> for more details.
 
 If you are just setting up or updating developer workstations and can tolerate things breaking every once in awhile because internet/uncertainty, it's fine to use the community feed.
 
@@ -304,7 +304,7 @@ Check out the FAQ on the [pricing](https://chocolatey.org/pricing#faq). If it do
 
 ### What can a Chocolatey Package consist of?
 
-See [What are Chocolatey Packages?](xref:getting-started#what-are-chocolatey-packages)
+See <Xref title="What are Chocolatey Packages?" value="getting-started" anchor="what-are-chocolatey-packages" />
 
 ### Tell me about packaging
 
@@ -327,7 +327,7 @@ Well, if you are not creating packages for the community package repository, you
 * the actual install location if using an installer
 * MSI cache for MSIs - Windows caches the complete MSI binaries (and now you know where all that space went)
 
-If you are on a licensed edition of Chocolatey, you can turn on Package Reducer and the first two items above no longer take up any significant space. This can reduce space usage in the order of GBs for some installations of Chocolatey. See [Package Reducer](xref:package-reducer) for more details.
+If you are on a licensed edition of Chocolatey, you can turn on Package Reducer and the first two items above no longer take up any significant space. This can reduce space usage in the order of GBs for some installations of Chocolatey. See <Xref title="Package Reducer" value="package-reducer" /> for more details.
 
 ### The install location displayed is incorrect or missing.
 
@@ -353,7 +353,7 @@ We have a documentation section of the site at https://docs.chocolatey.org
 
 ### Do you have any references or videos I can see?
 
-Yes we do, take a look at [videos](xref:videos) and [known posts, presentations, etc](xref:resources).
+Yes we do, take a look at <Xref title="videos" value="videos" /> and <Xref title="known posts, presentations, etc" value="resources" />.
 
 ### Is there a video I can watch to show me Chocolatey in action?
 
@@ -366,7 +366,7 @@ There is! This is a long video due to slow internet connections, but watch the f
 ## Community Package Repository
 
 ### I just took over as the primary maintainer of a package. What do I need to do?
-See [Package Maintainer Handover](xref:package-maintainer-handover)
+See <Xref title="Package Maintainer Handover" value="package-maintainer-handover" />
 
 ### What is moderation?
 
@@ -383,7 +383,7 @@ Things to note:
 
 ### How does the moderation review process work?
 
-See [Review Process](xref:moderation#package-review-process).
+See <Xref title="Review Process" value="moderation" anchor="package-review-process" />.
 
 ### What is a trusted package?
 
@@ -438,13 +438,13 @@ If you are a maintainer of a package and you would like to self-reject an older 
 
 ### What is the validator?
 
-The [validator](xref:package-validator) is a service that checks the quality of a package based on requirements, guidelines and suggestions for creating packages for Chocolatey's community feed. Many of the validation items will automatically roll back into choco and will be displayed when packaging a package. We like to think of the validator as unit testing. It is validating that everything is as it should be and meets the minimum requirements for a package on the community feed.
+The <Xref title="validator" value="package-validator" /> is a service that checks the quality of a package based on requirements, guidelines and suggestions for creating packages for Chocolatey's community feed. Many of the validation items will automatically roll back into choco and will be displayed when packaging a package. We like to think of the validator as unit testing. It is validating that everything is as it should be and meets the minimum requirements for a package on the community feed.
 
-What does the validator check? See the [validator docs](xref:package-validator).
+What does the validator check? See the <Xref title="validator docs" value="package-validator" />.
 
 ### What is the verifier?
 
-The [verifier](xref:package-verifier-service) is a service that checks the correctness (that the package actually works), that it installs and uninstalls correctly, has the right dependencies to ensure it is installed properly and can be installed silently. The verifier runs against both submitted packages and existing packages (currently checking once a month that a package can still install and sending notice when it fails). We like to think of the verifier as integration testing. It's testing all the parts and ensuring everything is good. On the site, you can see the current status of a package based on a little colored ball next to the title. If the ball is green or red, the ball is a link to the results (only on the package page, not in the list screen).
+The <Xref title="verifier" value="package-verifier-service" /> is a service that checks the correctness (that the package actually works), that it installs and uninstalls correctly, has the right dependencies to ensure it is installed properly and can be installed silently. The verifier runs against both submitted packages and existing packages (currently checking once a month that a package can still install and sending notice when it fails). We like to think of the verifier as integration testing. It's testing all the parts and ensuring everything is good. On the site, you can see the current status of a package based on a little colored ball next to the title. If the ball is green or red, the ball is a link to the results (only on the package page, not in the list screen).
 
 ![Passing verification](/images/faqs/verification-successful.png)
 
@@ -467,11 +467,11 @@ All packages (and the binaries they contain or download at runtime) on community
 
 > :choco-info: **NOTE**
 >
-> Need runtime malware protection? Learn more about [runtime malware protection](xref:virus-check)
+> Need runtime malware protection? Learn more about <Xref title="runtime malware protection" value="virus-check" />
 
 ### What is the package cacher?
 
-On the community repository, we have a CDN cache for those files that would be downloaded by packages - those remote urls are overridden by default in licensed editions of Chocolatey to use those cached binaries. This is to avoid 404 errors you would normally see if those urls changed or were removed. See [Customer CDN Download Cache](xref:private-cdn) for more details.
+On the community repository, we have a CDN cache for those files that would be downloaded by packages - those remote urls are overridden by default in licensed editions of Chocolatey to use those cached binaries. This is to avoid 404 errors you would normally see if those urls changed or were removed. See <Xref title="Customer CDN Download Cache" value="private-cdn" /> for more details.
 
 ## Comparison
 
@@ -483,7 +483,7 @@ Use ChocolateyGet for now.
 
 ### How is Chocolatey different than Ninite?
 
-Great question, see [Chocolatey vs Ninite](xref:chocolatey-vs-ninite).
+Great question, see <Xref title="Chocolatey vs Ninite" value="chocolatey-vs-ninite" />.
 
 ### How is Chocolatey different than NuGet and/or OpenWrap?
 

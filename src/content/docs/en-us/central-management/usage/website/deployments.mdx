@@ -73,7 +73,7 @@ You will also need to have at least one Group of computers already defined.
 
         ![Chocolatey Central Management Deployment Plan advanced step action](/images/ccm-playwright/deployment-plans/edit/modal-step-advanced-command.png)
 
-    * You can use [Sensitive Variables](xref:ccm-administration-sensitive-variables#adding-sensitive-variables-to-scripts) in an Advanced script in Chocolatey Central Management version 0.7.0 and later.
+    * You can use <Xref title="Sensitive Variables" value="ccm-administration-sensitive-variables" anchor="adding-sensitive-variables-to-scripts" /> in an Advanced script in Chocolatey Central Management version 0.7.0 and later.
    <?! Include "../../../../shared/sensitive-variables-note.txt" /?>
 
 1. (Optional) Click **Show advanced filters** to set one or more of the following options:
@@ -197,7 +197,7 @@ While in one of these states, the available actions that can be performed on a D
 - [Export](#export)
 
 In most cases Deployment Plans in one of the Completed states will remain in that same state.
-However, due to changes introduced in [Chocolatey Agent v1.1.0](xref:agent-release-notes#august-22-2022), a Deployment Plan in the `Inconclusive` state due to the computer or the Agent service being shut down or restarted during the Deployment Step, may retry the task and later update the Deployment Plan's status.
+However, due to changes introduced in <Xref title="Chocolatey Agent v1.1.0" value="agent-release-notes" anchor="august-22-2022" />, a Deployment Plan in the `Inconclusive` state due to the computer or the Agent service being shut down or restarted during the Deployment Step, may retry the task and later update the Deployment Plan's status.
 This can result in the Deployment Step or overall Deployment Plan changing from the `Inconclusive` status to `Success` or `Failed` depending on the final status of the retried task.
 
 ### Archived
@@ -231,7 +231,7 @@ The action makes an exact copy (with the exception of any scheduled start/end ti
 
 > :choco-info: **NOTE**
 >
-> There is a specific permission to allow duplication of a Deployment Plan. If you want to configure this permission, it can be done either for an individual [user](xref:ccm-administration-users), or a specific [role](xref:ccm-administration-roles)
+> There is a specific permission to allow duplication of a Deployment Plan. If you want to configure this permission, it can be done either for an individual <Xref title="user" value="ccm-administration-users" />, or a specific <Xref title="role" value="ccm-administration-roles" />
 
 ### Delete
 
@@ -303,7 +303,7 @@ While you might be able to get things to work with Chocolatey Central Management
 
 ### What Is the Chocolatey Central Management Compatibility Matrix?
 
-Chocolatey Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of Chocolatey Central Management and vice versa.  Please see the [Chocolatey Central Management Component Compatibility Matrix](xref:central-management#ccm-component-compatibility-matrix) for details.
+Chocolatey Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of Chocolatey Central Management and vice versa.  Please see the <Xref title="Chocolatey Central Management Component Compatibility Matrix" value="central-management" anchor="ccm-component-compatibility-matrix" /> for details.
 
 ### Why Do I See Some Machines Have Not Opted in for Deployments?
 
@@ -315,7 +315,7 @@ As you can see from the text, it is meant to help you figure out the issue:
 
 > The Computer has not opted in, or a Group contains computers that have not opted in for Deployments by configuration. Please ensure the computer has at least chocolatey-agent v0.10.0+ installed and the feature "useChocolateyCentralManagementDeployments" has been set to enabled on the client computer.
 
-This is telling you that you need to ensure you set the client to allow for the use of Deployments. As it is a security consideration, it requires an explicit opt-in on client machines. See [Client Setup - Features](xref:ccm-client#features) for details on how to set it.
+This is telling you that you need to ensure you set the client to allow for the use of Deployments. As it is a security consideration, it requires an explicit opt-in on client machines. See <Xref title="Client Setup - Features" value="ccm-client" anchor="features" /> for details on how to set it.
 
 ### I Have Plenty of Licenses, Why Do Some Machines Show Not Opted in for Deployments and Also Exceeds Your Current License Count?
 
@@ -323,9 +323,9 @@ Once you upgrade to at least Chocolatey Central Management v0.2.0, every machine
 
 ### Can I use Chocolatey Deployment Plans to upgrade Chocolatey Central Management based components?
 
-You can upgrade the chocolatey-agent package via Chocolatey Central Management. To do so please see [here](xref:upgrade-agent#use-chocolatey-central-management-to-upgrade-chocolatey-agent) as this must be performed as an advanced Deployment Step.
+You can upgrade the chocolatey-agent package via Chocolatey Central Management. To do so please see <Xref title="here" value="upgrade-agent" anchor="use-chocolatey-central-management-to-upgrade-chocolatey-agent" /> as this must be performed as an advanced Deployment Step.
 
-We do not recommend upgrading Chocolatey Central Management itself via an automated Deployment Plan process. Please see our [Chocolatey Central Management Upgrade Documentation](xref:ccm-upgrade) for the supported upgrade process.
+We do not recommend upgrading Chocolatey Central Management itself via an automated Deployment Plan process. Please see our <Xref title="Chocolatey Central Management Upgrade Documentation" value="ccm-upgrade" /> for the supported upgrade process.
 
 ### What is Run Actual?
 
@@ -479,7 +479,7 @@ For more information on when this will be addressed, you can subscribe to the [G
 
 ## Related Topics
 
-* [Chocolatey Central Management](xref:central-management)
-* [Chocolatey Central Management - Groups](xref:ccm-groups)
-* [Chocolatey Central Management - Computers](xref:ccm-computers)
-* [Chocolatey Central Management - Reports](xref:ccm-reports)
+* <Xref title="Chocolatey Central Management" value="central-management" />
+* <Xref title="Chocolatey Central Management - Groups" value="ccm-groups" />
+* <Xref title="Chocolatey Central Management - Computers" value="ccm-computers" />
+* <Xref title="Chocolatey Central Management - Reports" value="ccm-reports" />

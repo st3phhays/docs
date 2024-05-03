@@ -72,7 +72,7 @@ For example, when upgrading from **v1.x** to a **v2.x** version of a Chocolatey 
 1. Ensure you have downloaded all of the Chocolatey products to your working directory.
   <?! Include "../../../shared/intune-download-architect.txt" /?>
   <?! Include "../../../shared/intune-download-business.txt" /?>
-1. Convert Chocolatey CLI: `choco convert chocolatey.<version>.nupkg --to=intune` (This will create an all encompassing intunewin file that contains all Chocolatey products. See the [FAQ](xref:intune-faq#why-do-i-need-all-of-the-chocolatey-products-if-im-not-using-them) for further information.).
+1. Convert Chocolatey CLI: `choco convert chocolatey.<version>.nupkg --to=intune` (This will create an all encompassing intunewin file that contains all Chocolatey products. See the <Xref title="FAQ" value="intune-faq" anchor="why-do-i-need-all-of-the-chocolatey-products-if-im-not-using-them" /> for further information.).
 1. Convert Chocolatey Licensed Extension: `choco convert chocolatey.extension.<version>.nupkg --to=intune`.
 1. Push Chocolatey CLI to Intune: `choco push chocolatey.<version>.intunewin`.
 1. Push Chocolatey Licensed Extension to Intune: `choco push chocolatey.extension.<version>.intunewin`.

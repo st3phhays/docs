@@ -14,7 +14,7 @@ If you use the Chocolatey for Business Azure Environment for long periods of tim
 - You will need Chocolatey CLI installed.
 - You will need your new Chocolatey for Business license file.
 - You will need the FQDN of your Chocolatey for Business Azure Environment.
-- You will need the API Key for your Nexus repository (or access to the Resource Group hosting your Azure Key Vault to be able to [retrieve it](xref:c4b-azure#accessing-services)).
+- You will need the API Key for your Nexus repository (or access to the Resource Group hosting your Azure Key Vault to be able to <Xref title="retrieve it" value="c4b-azure" anchor="accessing-services" />).
 
 ## Creating a New License Package
 
@@ -124,4 +124,4 @@ choco push $LicensePackage.FullName --source="https://$($FQDN)/nexus/repository/
 
 ## Pushing the New License to Nodes
 
-You can either rely on automation to push this package (and updated license) to your nodes, or refer to [these documents](xref:ccm-deployments) to trigger a deployment manually.
+You can either rely on automation to push this package (and updated license) to your nodes, or refer to <Xref title="these documents" value="ccm-deployments" /> to trigger a deployment manually.

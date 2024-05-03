@@ -8,7 +8,7 @@ redirectFrom:
    en-us/central-management/usage/groups
 ---
 
-Groups are the basis on which a given [Deployment Plan](xref:ccm-deployments) operates.
+Groups are the basis on which a given <Xref title="Deployment Plan" value="ccm-deployments" /> operates.
 A Group may contain one or more Computers, and/or other Groups.
 Currently, Groups are entirely self-contained, and cannot be directly mapped from Active Directory Groups.
 
@@ -120,7 +120,7 @@ The Deployment Plan can be saved without adding a script command, however it wil
 
 ![Red popover warning on Deployment Step with ineligible deployment message](/images/ccm-playwright/deployment-plans/edit/popover-ineligible-step.png)
 
-After adding a script command to the Deployment Step, the Deployment Plan can be deployed as outlined in the [Deployment Plans documentation](xref:ccm-deployments).
+After adding a script command to the Deployment Step, the Deployment Plan can be deployed as outlined in the <Xref title="Deployment Plans documentation" value="ccm-deployments" />.
 
 ## Eligibility for Deployments
 
@@ -142,7 +142,7 @@ As you can see from the text, it is meant to help you figure out the issue:
 
 > The Computer has not opted in, or a Group contains Computers that have not opted in, for deployments by configuration. Please ensure the Computer has at least Chocolatey Agent v0.10.0+ installed and the feature `useChocolateyCentralManagementDeployments` has been set to enabled on the client Computer.
 
-This is telling you that you need to ensure you set the client to allow for the use of Deployments. As it is a security consideration, it requires an explicit opt-in on client machines. See [Client Setup - Features](xref:ccm-client#features) for details on how to set it.
+This is telling you that you need to ensure you set the client to allow for the use of Deployments. As it is a security consideration, it requires an explicit opt-in on client machines. See <Xref title="Client Setup - Features" value="ccm-client" anchor="features" /> for details on how to set it.
 
 ### I have plenty of licenses, why do some machines show not opted in for deployments and also exceeds your current license count?
 
@@ -156,6 +156,6 @@ Once you upgrade to Central Management v0.3.0+, you have upgraded the Agent on t
 
 ## Related Topics
 
-* [Chocolatey Central Management](xref:central-management)
-* [Central Management - Deployments](xref:ccm-deployments)
-* [Central Management - Computers](xref:ccm-computers)
+* <Xref title="Chocolatey Central Management" value="central-management" />
+* <Xref title="Central Management - Deployments" value="ccm-deployments" />
+* <Xref title="Central Management - Computers" value="ccm-computers" />

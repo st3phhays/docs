@@ -20,9 +20,9 @@ This is the service that the agents (`chocolatey-agent`) communicates with. You 
 
 > :choco-warning: **WARNING**
 >
-> The [database](xref:ccm-database) must be setup and available, along with [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> The <Xref title="database" value="ccm-database" /> must be setup and available, along with <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
-* [High-level Requirements](xref:ccm-setup#high-level-requirements)
+* <Xref title="High-level Requirements" value="ccm-setup" anchor="high-level-requirements" />
 * PowerShell 5.1
 
 ## Step 2: Install Chocolatey Central Management Service Package
@@ -85,13 +85,13 @@ Note items with "`:`" mean a value should be provided. Items without are simply 
 
 ### Chocolatey Central Management Service Configuration
 
-For most installations, the default values for the Chocolatey Central Management Service configuration should be all that is required.  However, if you need to modify this configuration, then full details of what can be controlled is detailed on the [Chocolatey Central Management Service configuration page](xref:ccm-usage-service-configuration#chocolatey-configuration-file).
+For most installations, the default values for the Chocolatey Central Management Service configuration should be all that is required.  However, if you need to modify this configuration, then full details of what can be controlled is detailed on the <Xref title="Chocolatey Central Management Service configuration page" value="ccm-usage-service-configuration" anchor="chocolatey-configuration-file" />.
 
 ### Chocolatey Configuration
 
-There are a number of different Chocolatey Configuration values that can be set for the Chocolatey Central Management Service.  The main setting that _has_ to be set is detailed below, and you can find a complete list on the [Chocolatey Central Management Service configuration page](xref:ccm-usage-service-configuration#chocolatey-configuration-file).
+There are a number of different Chocolatey Configuration values that can be set for the Chocolatey Central Management Service.  The main setting that _has_ to be set is detailed below, and you can find a complete list on the <Xref title="Chocolatey Central Management Service configuration page" value="ccm-usage-service-configuration" anchor="chocolatey-configuration-file" />.
 
-* `centralManagementServiceUrl` = **' '** (empty) - The URL that should be used to communicate with Chocolatey Central Management. It should look something like `https://servicemachineFQDN:24020/ChocolateyManagementService`. See [FQDN usage](xref:ccm#fqdn-usage). Defaults to '' (empty). NOTE: Chocolatey Agent and Chocolatey Central Management Service share this value on a machine that contains both. If blank, the Chocolatey Central Management Service will construct a URL based on defaults of the machine, but is required to be set for Agents.
+* `centralManagementServiceUrl` = **' '** (empty) - The URL that should be used to communicate with Chocolatey Central Management. It should look something like `https://servicemachineFQDN:24020/ChocolateyManagementService`. See <Xref title="FQDN usage" value="ccm" anchor="fqdn-usage" />. Defaults to '' (empty). NOTE: Chocolatey Agent and Chocolatey Central Management Service share this value on a machine that contains both. If blank, the Chocolatey Central Management Service will construct a URL based on defaults of the machine, but is required to be set for Agents.
 
 > :choco-warning: **WARNING**
 >
@@ -123,10 +123,10 @@ When Chocolatey manages the password for a local Administrator, it creates a ver
 
 ### Database Authentication Scenarios
 
-* [Scenario 1 - Windows Authentication to Local SQL Server](xref:ccm-service#scenario-one)
-* [Scenario 2 - Active Directory Authentication to Remote SQL Server](xref:ccm-service#scenario-two)
-* [Scenario 3 - SQL Server Authentication to Local SQL Server](xref:ccm-service#scenario-three)
-* [Scenario 4 - SQL Server Authentication to Remote SQL Server](xref:ccm-service#scenario-four)
+* <Xref title="Scenario 1 - Windows Authentication to Local SQL Server" value="ccm-service" anchor="scenario-one" />
+* <Xref title="Scenario 2 - Active Directory Authentication to Remote SQL Server" value="ccm-service" anchor="scenario-two" />
+* <Xref title="Scenario 3 - SQL Server Authentication to Local SQL Server" value="ccm-service" anchor="scenario-three" />
+* <Xref title="Scenario 4 - SQL Server Authentication to Remote SQL Server" value="ccm-service" anchor="scenario-four" />
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
@@ -148,7 +148,7 @@ When Chocolatey manages the password for a local Administrator, it creates a ver
 
 #### Windows Authentication to Local SQL Server
 
-Monolithic - you have set up the [database](xref:ccm-database) to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to the local database.
+Monolithic - you have set up the <Xref title="database" value="ccm-database" /> to use Windows Authentication (or Mixed Mode Authentication). You wish to use a local Windows account to connect to the local database.
 
 ##### Specify User
 
@@ -158,7 +158,7 @@ choco install chocolatey-management-service -y --package-parameters="'/Connectio
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the user `<LocalWindowsAccount>` has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the user `<LocalWindowsAccount>` has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 ---
 
@@ -170,7 +170,7 @@ choco install chocolatey-management-service -y --package-parameters="'/Connectio
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the user `ChocolateyLocalAdmin` has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the user `ChocolateyLocalAdmin` has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 > :choco-info: **NOTE**
 >
@@ -181,7 +181,7 @@ choco install chocolatey-management-service -y --package-parameters="'/Connectio
 
 #### Active Directory Authentication to Remote SQL Server
 
-Split - you have set up the [database](xref:ccm-database) to use Windows Authentication (or Mixed Mode Authentication). You wish to use an Active Directory account to connect to an existing SQL instance.
+Split - you have set up the <Xref title="database" value="ccm-database" /> to use Windows Authentication (or Mixed Mode Authentication). You wish to use an Active Directory account to connect to an existing SQL instance.
 
 ```powershell
 choco install chocolatey-management-service -y --package-parameters="'/ConnectionString:Server=<RemoteSqlHost>;Database=ChocolateyManagement;Trusted_Connection=True; /Username:<DomainAccount>'" --package-parameters-sensitive="'/Password:<domain account password>'"
@@ -189,7 +189,7 @@ choco install chocolatey-management-service -y --package-parameters="'/Connectio
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the user `<DomainAccount>` has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the user `<DomainAccount>` has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 > :choco-info: **NOTE**
 >
@@ -200,7 +200,7 @@ choco install chocolatey-management-service -y --package-parameters="'/Connectio
 
 #### SQL Server Authentication to Local SQL Server
 
-Monolithic - you are installing the management service on the same machine as a SQL Server Express instance. You likely have a smaller environment where you have up to 1,000 machines. You have set up the [database](xref:ccm-database) to use Mixed Mode Authentication.
+Monolithic - you are installing the management service on the same machine as a SQL Server Express instance. You likely have a smaller environment where you have up to 1,000 machines. You have set up the <Xref title="database" value="ccm-database" /> to use Mixed Mode Authentication.
 
 ##### Licensed SQL Server
 
@@ -210,7 +210,7 @@ choco install chocolatey-management-service -y --package-parameters-sensitive="'
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 ---
 
@@ -222,14 +222,14 @@ choco install chocolatey-management-service -y --package-parameters-sensitive="'
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 :::
 :::{.tab-pane .fade #scenario-four role=tabpanel aria-labelledby=scenario-four-tab}
 
 #### SQL Server Authentication to Remote SQL Server
 
-Split - you are installing the management service(s) on a server, and targeting an existing SQL Server instance in your organization. You have set up the [database](xref:ccm-database) to use Mixed Mode Authentication.
+Split - you are installing the management service(s) on a server, and targeting an existing SQL Server instance in your organization. You have set up the <Xref title="database" value="ccm-database" /> to use Mixed Mode Authentication.
 
 ```powershell
 choco install chocolatey-management-service -y --package-parameters-sensitive="'/ConnectionString:Server=<RemoteSqlHost>;Database=ChocolateyManagement;User ID=ChocoUser;Password=Ch0c0R0cks;'"
@@ -237,7 +237,7 @@ choco install chocolatey-management-service -y --package-parameters-sensitive="'
 
 > :choco-warning: **WARNING**
 >
-> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See [logins and access](xref:ccm-database#step-2-set-up-sql-server-logins-and-access).
+> Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
 :::
 ::::
@@ -353,7 +353,7 @@ Unfortunately, this is not a supported scenario. If you are trying to load balan
 
 ### We want to set up the Chocolatey Central Management service to use a domain account that will have local admin privileges on each box. Can we do this?
 
-Yes, absolutely. You will pass those credentials through at install/upgrade time, and you will also want to turn on the feature `useRememberedArgumentsForUpgrades` (see [configuration](xref:configuration#features)) so that future upgrades will have that information available. The remembered arguments are stored encrypted on the box (and that encryption is reversible so you may opt to pass that information each time).
+Yes, absolutely. You will pass those credentials through at install/upgrade time, and you will also want to turn on the feature `useRememberedArgumentsForUpgrades` (see <Xref title="configuration" value="configuration" anchor="features" />) so that future upgrades will have that information available. The remembered arguments are stored encrypted on the box (and that encryption is reversible so you may opt to pass that information each time).
 
 * `/Username`: - provide username - instead of using the default 'ChocolateyLocalAdmin' user. This user should be a local Administrator.
 * `/Password`: - optional password for the user.
@@ -409,7 +409,7 @@ Yes, absolutely. If you use Chocolatey For Business's PowerShell Windows Service
 
 ### What is the Chocolatey Central Management Component Compatibility Matrix?
 
-Chocolatey Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of Chocolatey Central Management and vice versa.  Please see the [Chocolatey Central Management Component Compatibility Matrix](xref:central-management#ccm-component-compatibility-matrix) for details.
+Chocolatey Central Management has specific compatibility requirements with quite a few moving parts. It is important to understand that there are some Chocolatey Agent versions that may not be able to communicate with some versions of Chocolatey Central Management and vice versa.  Please see the <Xref title="Chocolatey Central Management Component Compatibility Matrix" value="central-management" anchor="ccm-component-compatibility-matrix" /> for details.
 
 ### I entered incorrect database details on install. Do I need to reinstall to fix that?
 
@@ -518,15 +518,15 @@ You may see messaging like the following in the `chocolatey-agent.log`:
  requirements, e.g. Message, Transport, None).
 ```
 
-This is due to having a Chocolatey Agent that is v0.10.0+ versus an older Chocolatey Central Management Service (< v0.2.0). Newer agents are incompatible because they use newer and more secure methods of communication. Please upgrade Chocolatey Central Management to v0.2.0+ at your earliest convenience. Or if you are on Chocolatey Central Management v0.3.0+, your agents need to be on v0.11.0+. Please refer to the [Chocolatey Central Management Component Compatibility Matrix](xref:central-management#ccm-component-compatibility-matrix).
+This is due to having a Chocolatey Agent that is v0.10.0+ versus an older Chocolatey Central Management Service (< v0.2.0). Newer agents are incompatible because they use newer and more secure methods of communication. Please upgrade Chocolatey Central Management to v0.2.0+ at your earliest convenience. Or if you are on Chocolatey Central Management v0.3.0+, your agents need to be on v0.11.0+. Please refer to the <Xref title="Chocolatey Central Management Component Compatibility Matrix" value="central-management" anchor="ccm-component-compatibility-matrix" />.
 
 ### Unable to check for deployments from Chocolatey Central Management.
 
-This will provide similar messaging as the above. The fix is the same, upgrade Chocolatey Central Management to v0.2.0+. Or if you are on Chocolatey Central Management v0.3.0+, your agents need to be on v0.11.0+. Please refer to the [Chocolatey Central Management Component Compatibility Matrix](xref:central-management#ccm-component-compatibility-matrix). You may need to be on at least v0.3.0 and agents on v0.11.0+. If you are experiencing improper passphrase issues noted below, it means you need to likely upgrade to v0.3.0+ / v0.11.0 across your infrastructure.
+This will provide similar messaging as the above. The fix is the same, upgrade Chocolatey Central Management to v0.2.0+. Or if you are on Chocolatey Central Management v0.3.0+, your agents need to be on v0.11.0+. Please refer to the <Xref title="Chocolatey Central Management Component Compatibility Matrix" value="central-management" anchor="ccm-component-compatibility-matrix" />. You may need to be on at least v0.3.0 and agents on v0.11.0+. If you are experiencing improper passphrase issues noted below, it means you need to likely upgrade to v0.3.0+ / v0.11.0 across your infrastructure.
 
 ### We are seeing the error "attempted to call report_computer_information with an improper passphrase" in the Chocolatey Central Management service log.
 
-If you are in the Chocolatey Central Management service logs, you may see the above error. This is a bug that was found with the communication of Chocolatey Central Management v0.2.0 and Chocolatey Agent v0.10.0. That was resolved in Chocolatey Central Management v0.3.0 and Chocolatey Agent v0.11.0. Please see the [Chocolatey Central Management Component Compatibility Matrix](xref:central-management#ccm-component-compatibility-matrix) and [Licensed Issue #152](https://github.com/chocolatey/chocolatey-licensed-issues/issues/152) for more details.
+If you are in the Chocolatey Central Management service logs, you may see the above error. This is a bug that was found with the communication of Chocolatey Central Management v0.2.0 and Chocolatey Agent v0.10.0. That was resolved in Chocolatey Central Management v0.3.0 and Chocolatey Agent v0.11.0. Please see the <Xref title="Chocolatey Central Management Component Compatibility Matrix" value="central-management" anchor="ccm-component-compatibility-matrix" /> and [Licensed Issue #152](https://github.com/chocolatey/chocolatey-licensed-issues/issues/152) for more details.
 
 ### The client reports successful check-in, but nothing is showing up in Chocolatey Central Management.
 
@@ -609,9 +609,9 @@ You may see the following: `System.ServiceModel.AddressAccessDeniedException: HT
 
 You are attempting to set up a user that is not in the local Administrators group with the Chocolatey Central Management Service. **This is not a supported scenario.**
 
-Please refer to the [Chocolatey Central Management Service Windows Account Considerations](xref:ccm-service#chocolatey-central-management-service-windows-account-considerations) and select an option that works best for your organization.
+Please refer to the <Xref title="Chocolatey Central Management Service Windows Account Considerations" value="ccm-service" anchor="chocolatey-central-management-service-windows-account-considerations" /> and select an option that works best for your organization.
 
-[Central Management Setup](xref:ccm-setup) | [Chocolatey Central Management](xref:central-management)
+<Xref title="Central Management Setup" value="ccm-setup" /> | <Xref title="Chocolatey Central Management" value="central-management" />
 
 ### Error 1053: The service did not respond to the start or control request in a timely fashion.
 

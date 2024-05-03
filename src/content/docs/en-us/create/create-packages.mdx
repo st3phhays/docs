@@ -12,13 +12,13 @@ redirectFrom:
 
 ## Summary
 
-See [What are Chocolatey Packages?](xref:getting-started#what-are-chocolatey-packages) first.
+See <Xref title="What are Chocolatey Packages?" value="getting-started" anchor="what-are-chocolatey-packages" /> first.
 
 > :choco-info: **NOTE**
 >
 > When you host internal packages, those packages can embed software and/or point to internal shares. You are not subject to software distribution rights like the packages on the community feed, so you can create packages that are more reliable and secure.
 
-First you should determine if you are making a self-contained package or (also) using automation scripts. You should also consider creating [automatic packages](xref:automatic-packaging) for the best maintainability over time.
+First you should determine if you are making a self-contained package or (also) using automation scripts. You should also consider creating <Xref title="automatic packages" value="automatic-packaging" /> for the best maintainability over time.
 
 1. Run `choco new -h` to get a feel for what you can pass e.g `choco new bob` (to create a package named `bob`)
 1. Note all the rules below. This will help you, especially in publishing to the community feed (https://chocolatey.org)
@@ -27,19 +27,19 @@ First you should determine if you are making a self-contained package or (also) 
 
 If you have a self-contained package, you can remove the automation scripts
 entirely and just include the runtime executables, they will automatically get shimmed,
-which puts them on the path. Ensure you have the [legal right to distribute](xref:legal)
+which puts them on the path. Ensure you have the <Xref title="legal right to distribute" value="legal" />
 the application though. You should read up on the Shim Generation section
 below though to familiarize yourself on what to do with GUI applications
 and/or ignoring shims (also known as batch redirects).
 
 ### Including the Software Installer in the Package
 
-Sometimes called embedding the binaries, there are functions in the automation scripts you can call that will use the installers directly from the package instead of downloading first. This makes for the most reliable and deterministic packages, but ensure you have the [legal right to distribute](xref:legal) the software first if publishing to a public location (like the community package repository).
+Sometimes called embedding the binaries, there are functions in the automation scripts you can call that will use the installers directly from the package instead of downloading first. This makes for the most reliable and deterministic packages, but ensure you have the <Xref title="legal right to distribute" value="legal" /> the software first if publishing to a public location (like the community package repository).
 
 ### Automation Scripts
 
-You have a powerful use of Chocolatey, as you are using PowerShell. So you can do just about anything you need. Choco has some very handy [built-in functions](xref:powershell-reference) that you can use, these are sometimes called
-[helpers](xref:powershell-reference).
+You have a powerful use of Chocolatey, as you are using PowerShell. So you can do just about anything you need. Choco has some very handy <Xref title="built-in functions" value="powershell-reference" /> that you can use, these are sometimes called
+<Xref title="helpers" value="powershell-reference" />.
 
 ## Table of Contents
 
@@ -57,12 +57,12 @@ You have a powerful use of Chocolatey, as you are using PowerShell. So you can d
 1. [Make shim for GUI application](#how-do-i-set-up-batch-redirects-for-applications-that-have-a-gui)
 1. [Localization](#internationalization-and-localization-of-packages)
 1. [Building](#build-your-package) / [Testing](#testing-your-package) / [Pushing](#push-your-package)
-1. [Maintainer magic - automatically updating packaging](xref:automatic-packaging)
-1. [Taking over existing package](xref:package-maintainer-handover)
+1. <Xref title="Maintainer magic - automatically updating packaging" value="automatic-packaging" />
+1. <Xref title="Taking over existing package" value="package-maintainer-handover" />
 
 ## Quick Start Guide
 
-If you think you got what it takes and just want to know the basic steps to get a package out, there is a special [Quick Start Guide](xref:create-packages-quick-start) for you.
+If you think you got what it takes and just want to know the basic steps to get a package out, there is a special <Xref title="Quick Start Guide" value="create-packages-quick-start" /> for you.
 
 > :choco-info: **NOTE**
 >
@@ -73,7 +73,7 @@ If you think you got what it takes and just want to know the basic steps to get 
 There are a few rules that you have to follow before pushing packages to chocolatey.org:
 
 1. **Don't package illegal software.** Packages of software that is illegal in most countries in the world are prohibited to publish on Chocolatey.org. This applies in particular to software that violates the copyright, pirated software and activation cracks. Remember that this also affects software that is especially designed to accomplish software piracy.
-1. **Do not include software in a package that you don't have the right to distribute.** Please see [Distribution Rights](xref:legal#distributions) for more information. Any package found not in compliance with this will be removed immediately. Instead you can download binaries from official distribution locations at runtime.
+1. **Do not include software in a package that you don't have the right to distribute.** Please see <Xref title="Distribution Rights" value="legal" anchor="distributions" /> for more information. Any package found not in compliance with this will be removed immediately. Instead you can download binaries from official distribution locations at runtime.
 1. **Packaging commercial or trial software?** Clearly state this in the package description. Does it require an activation key? Is there a trial period if you don't have a key? How long is this trial period?
 1. **Only post publicly relevant packages.** You should consider whether this package is useful for others. If that is not the case, it shouldn't be published on Chocolatey.org. Reasons for that can be if the package would require a very customized configuration. You can host your personal packages on [MyGet](https://www.myget.org/) and still be able to install them with Chocolatey using the `-source` parameter.
 1. **Do not publish junk or malware** packages.
@@ -83,7 +83,7 @@ There are a few rules that you have to follow before pushing packages to chocola
 1. **Split dependencies into multiple packages.** Try to split up packages as much as possible. If for example a program comes with additional modules/installers that are optional, make different packages for them instead of including all the things into one package. This idea is already widely applied for Linux packages, because it leads to a more lightweight system and reduces potential issues and conflicts.
 1. **Use a simple intuitive lowercase name for the package**. See the [package naming guidelines](#naming-your-package) for details. (If you are a reviewer/moderator, this is considered a guideline).
 
-Is your package unqualified for the Chocolatey feed, but you like to be able to install it through Chocolatey? One alternative would be to host your package on MyGet. See [Hosting Chocolatey Packages on MyGet](xref:hosting-chocolatey-packages-on-myget).
+Is your package unqualified for the Chocolatey feed, but you like to be able to install it through Chocolatey? One alternative would be to host your package on MyGet. See <Xref title="Hosting Chocolatey Packages on MyGet" value="hosting-chocolatey-packages-on-myget" />.
 
 ## Character Encoding
 
@@ -112,10 +112,10 @@ The main release of a product versions are usually sufficient. If there are also
 
 There are three main elements to a Chocolatey package. Only the nuspec is required (#1 below).
 
-1. [Nuspec](xref:create-packages#nuspec)
-1. [chocolateyInstall.ps1](xref:chocolatey-install-ps1) - check out the [helper reference](xref:powershell-reference)
-1. any application files to include (it is highly suggested that you are the author in this case or you have the right to [distribute files](xref:legal)). EXE files in the package/downloaded to package folder from chocolateyInstall.ps1 will get a link to the command line.
-1. chocolateyUninstall.ps1, for uninstalling your package. See [helper reference](xref:powershell-reference) for functions available in your script.
+1. <Xref title="Nuspec" value="create-packages" anchor="nuspec" />
+1. <Xref title="chocolateyInstall.ps1" value="chocolatey-install-ps1" /> - check out the <Xref title="helper reference" value="powershell-reference" />
+1. any application files to include (it is highly suggested that you are the author in this case or you have the right to <Xref title="distribute files" value="legal" />). EXE files in the package/downloaded to package folder from chocolateyInstall.ps1 will get a link to the command line.
+1. chocolateyUninstall.ps1, for uninstalling your package. See <Xref title="helper reference" value="powershell-reference" /> for functions available in your script.
 
 > :choco-info: **NOTE**
 >
@@ -189,7 +189,7 @@ There is at least one noted exception to this and that is low-level packages tha
 
 ## Installation Paths
 
-As the package maintainer, you decide where the packaged application is installed or extracted to. Depending on your type of application (see _"What distinction does Chocolatey make between an installable and a portable application?"_ at the bottom of the [FAQ](xref:faqs)) there are a couple of suitable locations (not listed in any particular order):
+As the package maintainer, you decide where the packaged application is installed or extracted to. Depending on your type of application (see _"What distinction does Chocolatey make between an installable and a portable application?"_ at the bottom of the <Xref title="FAQ" value="faqs" />) there are a couple of suitable locations (not listed in any particular order):
 
 ### 1. The default installation path of your .msi/.exe setup file
 
@@ -263,7 +263,7 @@ Example instructions:
 
 ## Upgrading
 
-Prior to choco version 0.9.10, there is no dedicated automation script for upgrade scenarios. Instead, your [chocolateyInstall.ps1](xref:chocolatey-install-ps1) script should support installing/upgrading on top of any previous versions of your package.
+Prior to choco version 0.9.10, there is no dedicated automation script for upgrade scenarios. Instead, your <Xref title="chocolateyInstall.ps1" value="chocolatey-install-ps1" /> script should support installing/upgrading on top of any previous versions of your package.
 
 More recent versions of choco (0.9.10+) give you the option of supplying a `chocolateyBeforeModify.ps1` script.
 If applicable, the version of this script from the currently installed package will be run before subsequent
@@ -271,7 +271,7 @@ chocolateyInstall or chocolateyUninstall scripts.
 
 ## Uninstalling
 
-Uninstalling is handled by a `chocolateyUninstall.ps1` script, which should be in your package's `tools` directory, next to [chocolateyInstall.ps1](xref:chocolatey-install-ps1). All the usual [helper reference](xref:powershell-reference) are available. If your package doesn't uninstall cleanly, people will get grumpy because they'll have to manually clean up after you. Be a good human being and write an uninstaller.
+Uninstalling is handled by a `chocolateyUninstall.ps1` script, which should be in your package's `tools` directory, next to <Xref title="chocolateyInstall.ps1" value="chocolatey-install-ps1" />. All the usual <Xref title="helper reference" value="powershell-reference" /> are available. If your package doesn't uninstall cleanly, people will get grumpy because they'll have to manually clean up after you. Be a good human being and write an uninstaller.
 
 ## Dependency Chaining
 
@@ -314,7 +314,7 @@ These guidelines are already commonly applied on packages for all major Linux di
 Note that some packages in the Chocolatey Community Repository don't follow these guidelines; many of these were created before these guidelines were introduced.
 New packages should follow the guidelines to improve the overall experience for users going forward.
 
-If you are going to offer a package that has both an installer and an archive (zip or executable only) version of the application, create three packages - see [Portable vs Installable](xref:faqs#what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application) and [Install, Portable, and Meta/Virtual Packages](xref:faqs#what-is-the-difference-between-packages-no-suffix-as-compared-to.install.portable).
+If you are going to offer a package that has both an installer and an archive (zip or executable only) version of the application, create three packages - see <Xref title="Portable vs Installable" value="faqs" anchor="what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application" /> and <Xref title="Install, Portable, and Meta/Virtual Packages" value="faqs" anchor="what-is-the-difference-between-packages-no-suffix-as-compared-to.install.portable" />.
 
 ### Naming Packages to Allow for Side-by-Side Installation
 
@@ -329,7 +329,7 @@ This has been deprecated and is no longer supported in version 2.0.0 due to many
 1. Create _separate package IDs_ for each major version (or major + minor version, depending on the expectations of users) which include the version number in the ID.
   For example, if the package ID would be `python`, the package for major version 2 would be `python2`, or a package for specifically the 2.7 branch might be `python27` or `python2-7`.
   These individual versioned packages can be updated as normal, as long as that major and/or minor version is still receiving further updates.
-1. Create a [**metapackage**](xref:getting-started#terminology) for the overall product with a package version for each of the versioned packages.
+1. Create a <Xref title="**metapackage**" value="getting-started" anchor="terminology" /> for the overall product with a package version for each of the versioned packages.
   In other words, create another package (this time without a version number in the ID), which contains only a `nuspec` file and add a dependency on the versioned package.
   Following the above example for Python, we'd create a package with the ID `python` at version `2.0.0` that takes a dependency on the `python2` package.
 1. New versions of the metapackage should be published for "sub-versions" of the dependency package as well.
@@ -439,7 +439,7 @@ Example: In the case of `Bob.exe` you would create a file named `Bob.exe.gui` an
 
 ## Build Your Package
 
-Open a command line in the directory where the nuspec is and type [`choco pack`](xref:choco-command-pack). That's it.
+Open a command line in the directory where the nuspec is and type <Xref title="`choco pack`" value="choco-command-pack" />. That's it.
 
 ## Testing Your Package
 
@@ -478,7 +478,7 @@ When your `nuspec` specifies dependencies that are not in your source, you shoul
 ```
 
 You'll need to append the API path like so:
-`--source "'.;https://community.chocolatey.org/api/v2/'"` (note the double quotes bookending the apostrophes here, use `%cd%` in cmd.exe or `$pwd` in Powershell.exe if `.` doesn't resolve). See [passing options with quotes](xref:choco-commands#how-to-pass-options-switches).
+`--source "'.;https://community.chocolatey.org/api/v2/'"` (note the double quotes bookending the apostrophes here, use `%cd%` in cmd.exe or `$pwd` in Powershell.exe if `.` doesn't resolve). See <Xref title="passing options with quotes" value="choco-commands" anchor="how-to-pass-options-switches" />.
 
 > :choco-info: **NOTE**
 >
@@ -503,15 +503,15 @@ You can also type `choco install --force --debug --verbose path/to/nuspec` and c
 To push your package after you have built and tested it, you type `choco push packageName.nupkg --source sourceLocation` where **packageName.nupkg** is the file name of the nupkg that was built and **sourceLocation** is the location of the source you want to push to (for example, `--source "'https://push.chocolatey.org/'"` for the Chocolatey Community Repository).
 You must either have set an API key for the target URL, or provide an API key directly to the `push` command via the `--api-key` option.
 For example, if pushing to the Chocolatey Community Repository, you will need to have previously set an API key for `https://push.chocolatey.org/` (`choco apikey add --source "'https://push.chocolatey.org/'" --key "'API_KEY_HERE'"`).
-For more information, see the reference documentation for [`choco push`](xref:choco-command-push).
+For more information, see the reference documentation for <Xref title="`choco push`" value="choco-command-push" />.
 
 As of Chocolatey CLI v2.0.0, you can set the `defaultPushSource` configuration value if you frequently push packages to the same source.
 For example: `choco config set --name defaultPushSource --value https://push.chocolatey.org/`
 
 ## Automatic Packaging?
 
-Yes - [Automatic Packaging](xref:automatic-packaging)
+Yes - <Xref title="Automatic Packaging" value="automatic-packaging" />
 
 ## Becoming a Primary Maintainer of an Existing Package
 
-See [Package Maintainer Handover](xref:package-maintainer-handover)
+See <Xref title="Package Maintainer Handover" value="package-maintainer-handover" />

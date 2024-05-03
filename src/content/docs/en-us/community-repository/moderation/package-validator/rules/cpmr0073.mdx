@@ -14,13 +14,13 @@ In an automation script (`.ps1`/`.psm1`), one or more calls that downloads files
 
 The following helper functions are currently being validated by this rule, with possibly more being added in the future.
 
-- [`Install-ChocolateyPackage`](xref:install-chocolateypackage) - If the `Url` parameter is used, the associated `Checksum` parameter is additionally set (For 64bit this would be `Url64` / `Url64bit` and `Checksum64`).
-- [`Install-ChocolateyZipPackage`](xref:install-chocolateyzippackage) - If the `Url` parameter is used, the associated `Checksum` parameter is additionally set (For 64bit this would be `Url64` / `Url64bit` and `Checksum64`).
-- [`Get-ChocolateyWebFile`](xref:get-chocolateywebfile) - If the `Url` parameter is used, the associated `Checksum` parameter is additionally set (For 64bit this would be `Url64` / `Url64bit` and `Checksum64`).
-- [`Install-ChocolateyPowershellCommand`](xref:install-chocolateypowershellcommand) - If the `Url` parameter is used, the associated `Checksum` parameter is additionally set (For 64bit this would be `Url64` / `Url64bit` and `Checksum64`).
-- [`Install-ChocolateyVsixPackage`](xref:install-chocolateyvsixpackage) - If the `VsixUrl` / `Url` parameter is used, the associated `Checksum` parameter is additionally set.
-- [`Get-WebFile`](xref:get-webfile) - A low-level download of a single file that should generally be avoided unless necessary, requires an additional call to `Get-ChecksumValid` using the same file name specified for the output.
-- [`Get-FtpFile`](xref:get-ftpfile) - A low-level download of a single file that should generally be avoided unless necessary, requires an additional call to `Get-ChecksumValid` using the same file name specified for the output.
+- <Xref title="`Install-ChocolateyPackage`" value="install-chocolateypackage" /> - If the `Url` parameter is used, the associated `Checksum` parameter is additionally set (For 64bit this would be `Url64` / `Url64bit` and `Checksum64`).
+- <Xref title="`Install-ChocolateyZipPackage`" value="install-chocolateyzippackage" /> - If the `Url` parameter is used, the associated `Checksum` parameter is additionally set (For 64bit this would be `Url64` / `Url64bit` and `Checksum64`).
+- <Xref title="`Get-ChocolateyWebFile`" value="get-chocolateywebfile" /> - If the `Url` parameter is used, the associated `Checksum` parameter is additionally set (For 64bit this would be `Url64` / `Url64bit` and `Checksum64`).
+- <Xref title="`Install-ChocolateyPowershellCommand`" value="install-chocolateypowershellcommand" /> - If the `Url` parameter is used, the associated `Checksum` parameter is additionally set (For 64bit this would be `Url64` / `Url64bit` and `Checksum64`).
+- <Xref title="`Install-ChocolateyVsixPackage`" value="install-chocolateyvsixpackage" /> - If the `VsixUrl` / `Url` parameter is used, the associated `Checksum` parameter is additionally set.
+- <Xref title="`Get-WebFile`" value="get-webfile" /> - A low-level download of a single file that should generally be avoided unless necessary, requires an additional call to `Get-ChecksumValid` using the same file name specified for the output.
+- <Xref title="`Get-FtpFile`" value="get-ftpfile" /> - A low-level download of a single file that should generally be avoided unless necessary, requires an additional call to `Get-ChecksumValid` using the same file name specified for the output.
 
 ## Recommended Solution
 

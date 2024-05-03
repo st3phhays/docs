@@ -10,7 +10,7 @@ redirectFrom: en-us/quick-deployment/azure/rdp
 
 After deploying a Chocolatey for Business Azure Environment, you may wish to link the machine to an existing Active Directory domain or install monitoring software. This page will show you how to gain access to the primary VM within the environment via Remote Desktop Protocol (RDP).
 
-We will assume you know [how to retrieve passwords from your environment](xref:c4b-azure#accessing-services). In order to connect, you need the VM username and password (stored in the deployed Azure Key Vault).
+We will assume you know <Xref title="how to retrieve passwords from your environment" value="c4b-azure" anchor="accessing-services" />. In order to connect, you need the VM username and password (stored in the deployed Azure Key Vault).
 
 ## Azure Portal
 
@@ -55,7 +55,7 @@ Now we will add a rule to the NSG. If you do not already know your current publi
     | Name                | RDPAccess _(or similar)_         |
 1. Click `Add` at the bottom of the panel
 
-You should now be able to try [Connecting to the VM](xref:c4b-azure-rdp#connecting-to-the-vm)
+You should now be able to try <Xref title="Connecting to the VM" value="c4b-azure-rdp" anchor="connecting-to-the-vm" />
 
 ## PowerShell
 
@@ -132,4 +132,4 @@ Write-Host "The IP Address to connect to is $($IPAddress)"
 > :choco-info: **NOTE**
 > It can sometimes take a few minutes for the Network Security Group rules to be updated.
 
-Finally, use the IP address that we found in the previous steps to [connect to the VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon) using the IP address you procured in the previous steps, using [the credential from the Azure Key Vault](xref:c4b-azure#accessing-services).
+Finally, use the IP address that we found in the previous steps to <Xref title="connect to the VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/connect-logon) using the IP address you procured in the previous steps, using [the credential from the Azure Key Vault" value="c4b-azure" anchor="accessing-services" />.

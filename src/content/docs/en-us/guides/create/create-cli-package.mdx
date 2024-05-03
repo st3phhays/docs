@@ -5,7 +5,7 @@ title: How To Create a CLI Executable Package
 description: A walkthrough creating a package containing a CLI executable application
 ---
 
-Chocolatey packages can also just contain executables - and you won't even need to write an installation script to use them! We're going to walk you through creating a CLI executable package now - assuming you've already run through [Preparing Your Environment for Package Creation](xref:howto-prepare-env).
+Chocolatey packages can also just contain executables - and you won't even need to write an installation script to use them! We're going to walk you through creating a CLI executable package now - assuming you've already run through <Xref title="Preparing Your Environment for Package Creation" value="howto-prepare-env" />.
 
 ### What Is a CLI Executable
 
@@ -23,13 +23,13 @@ This can be very helpful on a build container, or for tools that just don't need
 
 Normally, we'd talk about a function included with Chocolatey CLI that allows us to install some files - in this case, we're just dropping an EXE onto disk (and in the package directory, at that) - how is this going to work? Nobody will want to find and use the entire path to the tool every time! Happily, this has been solved for a while:
 
-[`Shimgen.exe`](xref:shim) is a long-term feature included with Chocolatey CLI, and is used so that you can have items available on the `PATH` (allowing them to be run on the command-line) without adding a new entry to the `PATH` for every package that needs it.
+<Xref title="`Shimgen.exe`" value="shim" /> is a long-term feature included with Chocolatey CLI, and is used so that you can have items available on the `PATH` (allowing them to be run on the command-line) without adding a new entry to the `PATH` for every package that needs it.
 
 EXEs that are found within the package directories at the end of installation have a shim created in the `$env:ChocolateyInstall\bin` folder, which is on the `PATH`.
 
 If you have an EXE file within your package that you don't want to have shimmed, you should create an empty file named `<FILENAME>.ignore` in the same directory as the EXE will be found.
 
-You can find more details around uses for Shimgen on [the docs page](xref:shim#faq).
+You can find more details around uses for Shimgen on <Xref title="the docs page" value="shim" anchor="faq" />.
 
 #### Creating a CLI Executable Package
 
