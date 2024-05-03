@@ -1,0 +1,7 @@
+---
+order: 30
+xref: quick-start-environment-folder
+title: C4B Quick Start Environment
+description: Quick start environment and supporting documentation
+redirectFrom: en-us/guides/organizations/quick-start-guide
+---

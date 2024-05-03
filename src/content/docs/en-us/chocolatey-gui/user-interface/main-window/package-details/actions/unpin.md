@@ -1,0 +1,12 @@
+---
+order: 50
+xref: gui-package-details-actions-unpin
+title: Unpin
+description: Information on how to use the Unpin action
+showInNavBar: false
+showInSideBar: false
+---
+
+> :choco-warning: **WARNING**
+>
+> This is a Work in Progress. Please check back later

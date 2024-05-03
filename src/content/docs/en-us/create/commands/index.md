@@ -1,0 +1,6 @@
+---
+order: 30
+xref: choco-create-commands
+title: Commands
+description: These are the Chocolatey commands that are typically used when creating a Chocolatey package
+---

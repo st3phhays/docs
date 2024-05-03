@@ -1,0 +1,6 @@
+---
+order: 40
+xref: maintainers
+title: Maintainers
+description: Information for maintainers of packages on the Chocolatey Community Repository
+---

@@ -1,0 +1,6 @@
+---
+order: 90
+xref: choco-features
+title: Features
+description: This is the main entry point for available features in Chocolatey CLI
+---

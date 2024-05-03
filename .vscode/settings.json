@@ -5,6 +5,7 @@
         "authenticode",
         "Checksumming",
         "chocolateypackage",
+        "Intune",
         "MITM",
         "SCCM",
         "TLDR",

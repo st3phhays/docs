@@ -51,7 +51,7 @@ This may not seem very powerful at first, but imagine when you want to **upgrade
 1. Hope it didn't install any malware
 1. Now do it again for **EVERY** piece of software on your system.
 
-![chris-farley-disbelief](/assets/images/gifs/chris-farley-disbelief.gif)
+![chris-farley-disbelief](/images/gifs/chris-farley-disbelief.gif)
 
 Now contrast that with how you do the same with **Chocolatey**:
 
@@ -59,7 +59,7 @@ Now contrast that with how you do the same with **Chocolatey**:
 1. Type `choco upgrade all -y`
 1. Walk away
 
-![shia-labeouf-magic-gif](/assets/images/gifs/shia-labeouf-magic.gif)
+![shia-labeouf-magic-gif](/images/gifs/shia-labeouf-magic.gif)
 
 <a name="can-i-use-chocolatey-with-existing-software"></a>
 
@@ -67,7 +67,7 @@ Now contrast that with how you do the same with **Chocolatey**:
 
 Yes, yes you can. Chocolatey works in a similar manner to how you would do things if you downloaded and installed things yourself. Its design and infrastructure is built that way on purpose. It takes the pain of manually doing it yourself away (see previous section).
 
-![Yes, yes](/assets/images/gifs/clint-eastwood-nodding.gif)
+![Yes, yes](/images/gifs/clint-eastwood-nodding.gif)
 
 Now, Chocolatey **can** take over existing installs and be able to handle uninstalls in most cases. **Can** is very dependent on packaging and the underlying software installer that is used for the install ([installer packages](xref:faqs#what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application) are the context here).
 

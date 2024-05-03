@@ -1,0 +1,6 @@
+---
+order: 50
+xref: gui-business-features
+title: Business Features
+description: Information about additional features that can be added using Chocolatey GUI for Business
+---

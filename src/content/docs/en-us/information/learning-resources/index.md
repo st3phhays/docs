@@ -1,0 +1,6 @@
+---
+order: 60
+xref: learning-resources
+title: More Learning Resources
+description: Videos, Presentation, and additional Resources for Chocolatey
+---

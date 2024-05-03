@@ -1,0 +1,6 @@
+---
+order: 90
+xref: choco
+title: Chocolatey CLI (choco)
+description: This is the main entry point for using Chocolatey, use choco.exe to install/upgrade packages
+---

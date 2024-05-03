@@ -1,0 +1,6 @@
+---
+order: 10
+xref: release-notes
+title: Release Notes
+description: Information about everything that has been released within a Chocolatey component
+---

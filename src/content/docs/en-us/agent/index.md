@@ -1,0 +1,6 @@
+---
+order: 130
+xref: chocolatey-agent
+title: Chocolatey Agent
+description: This is a Windows Services which Chocolatey uses to perform Self-Service installs, as well as to communicate with Chocolatey Central Management
+---

@@ -1,0 +1,6 @@
+---
+order: 40
+xref: ccm-usage-examples
+title: Examples
+description: Suggested configurations, deployments, and usages for Chocolatey Central Management
+---

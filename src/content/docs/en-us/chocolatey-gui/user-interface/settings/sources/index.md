@@ -1,0 +1,10 @@
+---
+order: 30
+xref: gui-sources
+title: Sources
+description: Configure the sources used by Chocolatey GUI
+---
+
+Within the Sources section of Settings screen, it is possible to view, add, edit and delete the different sources that are used by both Chocolatey GUI and Chocolatey.
+
+![Showing the Sources screen within settings](/images/chocolatey-gui/user_interface_settings_sources.png "Showing the Sources screen within settings")

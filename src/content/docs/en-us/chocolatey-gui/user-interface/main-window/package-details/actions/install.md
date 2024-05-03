@@ -1,0 +1,12 @@
+---
+order: 30
+xref: gui-package-details-actions-install
+title: Install
+description: Information on how to use the Install action
+showInNavBar: false
+showInSideBar: false
+---
+
+> :choco-warning: **WARNING**
+>
+> This is a Work in Progress. Please check back later

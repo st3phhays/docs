@@ -9,8 +9,12 @@ const docsCollection = defineCollection({
         xref: z.string().optional(),
         title: z.string(),
         description: z.string(),
+        ogImage: z.string().optional(),
+        twitterImage: z.string().optional(),
+        ruleType: z.string().optional(),
         redirectFrom: z.union([z.string(), z.array(z.string())]).optional(),
         showInSidebar: z.boolean().optional().default(true),
+        hideChildPages: z.boolean().optional().default(false)
     }),
 });
 
