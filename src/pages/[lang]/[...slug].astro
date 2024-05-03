@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 import { config } from '@scripts/config';
 
 import Layout from '@layouts/Layout.astro';
+import Xref from '@components/Xref.astro';
+
 export async function getStaticPaths() {
     const pages = await getCollection('docs');
 
@@ -39,7 +41,9 @@ const { Content } = await page.render();
             <div class="mb-4 col-lg-6 col-xl-4">
                 <div class="card card-link card-body bg-primary-opacity-25 h-100 lead p-md-5 d-flex justify-content-center">
                     <p>Ready to unlock the convenience of Chocolatey? Visit our installation guide to learn how to effortlessly set up Chocolatey CLI in seconds.</p>
-                    <div><a class="btn btn-dark text-white stretched-link" href='@Context.GetLink("/en-us/choco/setup")'>Install Chocolatey CLI</a></div>
+                    <div>
+                        <Xref title="Install Chocolatey CLI" value="setup-choco" classes="btn btn-dark text-white stretched-link">Install Chocolatey CLI</Xref>
+                    </div>
                 </div>
             </div>
         </div>

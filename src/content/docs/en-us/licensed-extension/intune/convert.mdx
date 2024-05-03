@@ -5,8 +5,11 @@ title: Converting Chocolatey Packages to Intune Packages
 description: How to convert Chocolatey Packages to Intune Packages
 ---
 import Xref from '@components/Xref.astro';
+import IntuneDownloadArchitect from '@components/docs/IntuneDownloadArchitect.astro';
+import IntuneDownloadBusiness from '@components/docs/IntuneDownloadBusiness.astro';
+import IntuneNote from '@components/docs/IntuneNote.astro';
 
-<?! Include "../../../shared/intune-note.txt" /?>
+<IntuneNote />
 
 ## Summary
 
@@ -62,8 +65,8 @@ choco convert firefox.86.0.nupkg --to-format=intune --ignore-dependencies
 > :choco-info: **NOTE**
 >
 > If the Chocolatey product packages do not exist in the same directory as the Chocolatey package you are converting, a warning about `chocolatey` and `chocolatey.extension` being 'missing' will be shown. This warning can be safely ignored if these two packages are already available in your Intune tenant. If these are not available in your Intune tenant, you may use one of these download commands, depending on your license:
-> <?! Include "../../../shared/intune-download-architect.txt" /?>
-> <?! Include "../../../shared/intune-download-business.txt" /?>
+> <IntuneDownloadArchitect />
+> <IntuneDownloadBusiness />
 
 ## FAQ
 

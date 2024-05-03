@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 
-const { title, value, anchor } = Astro.props
+const { title, value, anchor, classes } = Astro.props;
 const docsEntries = await getCollection('docs');
 const xrefs: { [key: string]: string }[] = [];
 
@@ -28,8 +28,10 @@ let xref = findKey(xrefs, value);
 
 // If an anchor was provided, append it to the slug
 if (anchor) {
-    xref = `/${xref}#${anchor}`;
+    xref = `${xref}#${anchor}`;
 }
+
+let allClasses = classes ? classes : '';
 ---
 
-<a href={xref} title={title}>{title}</a>
+<a class={allClasses} href={`/${xref}`} title={title}>{title}</a>

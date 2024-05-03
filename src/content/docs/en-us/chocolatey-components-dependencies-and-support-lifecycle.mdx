@@ -5,6 +5,8 @@ title: Chocolatey Components Dependencies and Support Lifecycle
 description: Provides information about the Support Lifecycle for various Chocolatey Components, as well as the dependencies between them.
 ---
 import Xref from '@components/Xref.astro';
+import ChocolateyComponentDependencies from '@components/docs/ChocolateyComponentDependencies.astro';
+import MaintenanceAndSupport from '@components/docs/MaintenanceAndSupport.astro';
 
 ## Product Support Lifecycle
 
@@ -51,6 +53,6 @@ This information is up-to-date as of 6 June 2023.
 - Windows Server 2012
 - Windows Server 2008 R2 (in Azure only)
 
-<?! Include "./shared/maintenance-and-support.txt" /?>
+<MaintenanceAndSupport />
 
-<?! Include "./shared/chocolatey-component-dependencies.txt" /?>
+<ChocolateyComponentDependencies />

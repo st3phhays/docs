@@ -7,6 +7,8 @@ ogImage: https://img.chocolatey.org/social-share/release-notes-chocolatey-gui-li
 twitterImage: https://img.chocolatey.org/social-share/release-notes-chocolatey-gui-licensed-extension-twitter.png
 ---
 import Xref from '@components/Xref.astro';
+import ChocolateyComponentDependenciesLink from '@components/ChocolateyComponentDependenciesLinks.astro';
+import MaintenanceAndSupportLink from '@components/docs/MaintenanceAndSupportLink.astro';
 
 # Chocolatey Release Notes - Chocolatey GUI Licensed Extension
 ## Summary
@@ -22,9 +24,9 @@ Please see <Xref title="Install the Licensed Edition" value="setup-chocolatey-gu
 - Refer to <Xref title="Open Source Release Notes" value="floss-release-notes" /> as commercial editions build on top of open source.
 - Chocolatey for Business (C4B) customers - also refer to <Xref title="Chocolatey Agent Release Notes" value="agent-release-notes" /> and <Xref title="Chocolatey Central Management Release Notes" value="ccm-release-notes" />.
 
-<?! Include "../../shared/maintenance-and-support-link.txt" /?>
+<MaintenanceAndSupportLink />
 
-<?! Include "../../shared/chocolatey-component-dependencies-link.txt" /?>
+<ChocolateyComponentDependenciesLink />
 
 
 ## 2.0.0 (May 31, 2023)

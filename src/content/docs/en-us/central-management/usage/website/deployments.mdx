@@ -8,6 +8,8 @@ redirectFrom:
   - en-us/central-management/usage/deployments
 ---
 import Xref from '@components/Xref.astro';
+import ImportDeploymentPlan from '@components/docs/ImportDeploymentPlan.astro';
+import SensitiveVariablesNote from '@components/docs/SensitiveVariablesNote.astro';
 
 ## Description
 
@@ -75,7 +77,7 @@ You will also need to have at least one Group of computers already defined.
         ![Chocolatey Central Management Deployment Plan advanced step action](/images/ccm-playwright/deployment-plans/edit/modal-step-advanced-command.png)
 
     * You can use <Xref title="Sensitive Variables" value="ccm-administration-sensitive-variables" anchor="adding-sensitive-variables-to-scripts" /> in an Advanced script in Chocolatey Central Management version 0.7.0 and later.
-   <?! Include "../../../../shared/sensitive-variables-note.txt" /?>
+   <SensitiveVariablesNote />
 
 1. (Optional) Click **Show advanced filters** to set one or more of the following options:
     * `Execution timeout`.
@@ -107,7 +109,7 @@ You will also need to have at least one Group of computers already defined.
 
 1. Select :floppy_disk: **Save** to save the changes to the Deployment Plan.
 
-<?! Include "../../../../shared/import-deployment-plan.txt" /?>
+<ImportDeploymentPlan />
 
 ## Recurring Deployment Plans
 

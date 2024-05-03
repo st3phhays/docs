@@ -1,3 +1,7 @@
+---
+import Xref from '@components/Xref.astro';
+---
+
 ## Maintenance and Support Contract Considerations for Perpetual License Customers
 
 Having a Maintenance and Support contract with Chocolatey Software, Inc. consists of two parts:
@@ -16,12 +20,12 @@ This can cause problems when there is a dependency that exists between a new ver
 
 > :choco-info: **NOTE**
 >
-> We added the dependency requirement to the [release notes](xref:choco-release-notes#march-21-2022) of v1.0.0 of Chocolatey CLI but some customers continued to experience the issue.
-> In the [v1.0.1](xref:choco-release-notes#march-24-2022) and the [v1.1.0](xref:choco-release-notes#march-30-2022) releases of Chocolatey CLI we implemented changes to allow Chocolatey CLI to work with the latest version of Chocolatey Licensed Extension. There are no guarantees that these changes will be applied in the same way to future versions.
+> We added the dependency requirement to the <Xref title="release notes" value="choco-release-notes" anchor="march-21-2022" /> of v1.0.0 of Chocolatey CLI but some customers continued to experience the issue.
+> In the <Xref title="v1.0.1" value="choco-release-notes" anchor="march-24-2022" /> and the <Xref title="v1.1.0" value="choco-release-notes" anchor="march-30-2022" /> releases of Chocolatey CLI we implemented changes to allow Chocolatey CLI to work with the latest version of Chocolatey Licensed Extension. There are no guarantees that these changes will be applied in the same way to future versions.
 
 If you are in this position, we suggest that you take one of the following actions:
 
 - Request a Maintenance and Support contract renewal, upgrade the Chocolatey Licensed Extension to the latest  version and then upgrade Chocolatey CLI.
-- Forego the Maintenance and Support contract renewal and stay with the version of Chocolatey CLI and Chocolatey Licensed Extension that you use. To prevent accidental upgrade of Chocolatey CLI we would suggest that you [pin](xref:choco-command-pin) to the version you use and ensure you are using an [internal repository](xref:organizational-deployment-guide).
+- Forego the Maintenance and Support contract renewal and stay with the version of Chocolatey CLI and Chocolatey Licensed Extension that you use. To prevent accidental upgrade of Chocolatey CLI we would suggest that you <Xref title="pin" value="choco-command-pin" /> to the version you use and ensure you are using an <Xref title="internal repository" value="organizational-deployment-guide" />.
 
 If you have any questions about your Perpetual License or your Maintenance and Support contract, please [reach out to the Sales team](https://chocolatey.org/contact/sales-general).

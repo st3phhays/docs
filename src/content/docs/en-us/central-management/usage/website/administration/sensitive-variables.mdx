@@ -6,6 +6,7 @@ description: Information on sensitive variables within Chocolatey Central Manage
 redirectFrom: en-us/central-management/usage/website/sensitive-variables
 ---
 import Xref from '@components/Xref.astro';
+import SensitiveVariablesNote from '@components/docs/SensitiveVariablesNote.astro';
 
 Chocolatey Central Management gives you the ability to create sensitive variables for use in Deployment Steps.
 
@@ -31,7 +32,7 @@ Alternatively, variables can also be added from an Deployment Step Advanced scri
 
 ## Adding Sensitive Variables to scripts
 
-<?! Include "../../../../../shared/sensitive-variables-note.txt" /?>
+<SensitiveVariablesNote />
 
 1. In an Advanced script of a Deployment Step, select the variable to insert from the Sensitive Variables drop down.
 

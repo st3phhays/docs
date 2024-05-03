@@ -8,6 +8,8 @@ twitterImage: https://img.chocolatey.org/social-share/release-notes-chocolatey-c
 redirectFrom: docs/release-notes-choco-cli
 ---
 import Xref from '@components/Xref.astro';
+import ChocolateyComponentDependenciesLink from '@components/docs/ChocolateyComponentDependenciesLink.astro';
+import MaintenanceAndSupportLink from '@components/docs/MaintenanceAndSupportLink.astro';
 
 # Chocolatey Release Notes - Open Source
 
@@ -17,9 +19,9 @@ This covers changes for the "chocolatey" and "chocolatey.lib" packages, which ar
 >
 > For commercial editions, please also refer to <Xref title="Licensed Release Notes" value="setup-licensed" />.
 
-<?! Include "../../shared/maintenance-and-support-link.txt" /?>
+<MaintenanceAndSupportLink />
 
-<?! Include "../../shared/chocolatey-component-dependencies-link.txt" /?>
+<ChocolateyComponentDependenciesLink />
 
 
 ## 2.2.2 (August 8, 2023)
