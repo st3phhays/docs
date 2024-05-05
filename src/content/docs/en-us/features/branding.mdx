@@ -137,6 +137,7 @@ deployed out to your environment.
 1. Copy the generated `ChocolateyGuiBranding.dll` into this folder
 1. Copy the following xml into a file called `chocolateygui-branding.nuspec`.
 
+```
         <?xml version="1.0" encoding="utf-8"?>
        <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
          <metadata>
@@ -157,6 +158,7 @@ deployed out to your environment.
            <file src="tools\**" target="tools" />
          </files>
        </package>
+```
 
 1. Copy the following PowerShell into a file called `tools\chocolateyInstall.ps1`
 

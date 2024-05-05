@@ -1,0 +1,18 @@
+---
+import { config } from '@scripts/config';
+
+// Components
+import SidebarSelf from '@components/sidebar/SidebarSelf.astro';
+import SidebarListItem from '@components/sidebar/SidebarListItem.astro';
+
+const { content } = Astro.props;
+---
+
+<ul class="navbar-nav">
+    {content.map(doc => (
+        doc.data.title == config.titleHome && (
+            <SidebarListItem content={doc} paddingClass={'ps-c2'} />
+        )
+    ))}
+    <SidebarSelf content={content[0].children} />
+</ul>

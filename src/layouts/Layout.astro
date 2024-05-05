@@ -1,10 +1,12 @@
 ---
 import childProcess from 'child_process';
 import { config } from '@scripts/config.ts';
+import { contentTree } from '@scripts/content-tree';
 
 // Components
 import Breadcrumbs from '@components/Breadcrumbs.astro';
-import ContentSidebar from '@components/content-sidebar/ContentSidebar.astro';
+import Children from '@components/Children.astro';
+import Sidebar from '@components/sidebar/Sidebar.astro';
 import GlobalNavigation from '@components/global/GlobalNavigation.astro';
 import ThemeToggle from '@components/global/ThemeToggle.astro';
 
@@ -65,7 +67,7 @@ const hash = childProcess
         <script is:inline async referrerpolicy="unsafe-url" src="https://ws.zoominfo.com/pixel/KPKpTJOFOv5SuV7X3eGx"></script>
 	</head>
 	<body class="chocolatey-docs">
-		<header transition:persist>
+		<header>
             <!-- Top Alert Banner -->
             <div class="d-none d-sm-flex">
                 <div class="global-nav w-100">
@@ -107,7 +109,7 @@ const hash = childProcess
                                             <GlobalNavigation />
                                         </div>
                                     </div>
-                                    <ContentSidebar transition:persist />
+                                    <Sidebar content={contentTree}/>
                                 </div>
                             </nav>
                         </div>
@@ -125,6 +127,7 @@ const hash = childProcess
                                         <Breadcrumbs isHome={isHome} />
                                     </div>
                                     <slot />
+                                    <Children content={contentTree} />
                                 </div>
                             </div>
                         </div>
@@ -132,7 +135,7 @@ const hash = childProcess
                 </div>
             </div>
 		</main>
-		<footer class="flex-shrink-0" transition:persist>
+		<footer class="flex-shrink-0">
             <div class="text-bg-body-secondary border-top text-center p-3">
                 <span class="small">&copy; {new Date().getFullYear()} {config.title}, Inc.</span><br />
                 <span class="small">Deployed from <a href={`https://github.com/chocolatey/docs/commit/${hash}`}>{hash}</a></span><br />

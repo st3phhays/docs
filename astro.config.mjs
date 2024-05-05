@@ -11,7 +11,7 @@ export default defineConfig({
     // host: true
   },
   redirects: {
-    './': '/en-us',
+    // './': '/en-us',
   },
   experimental: {
     // contentCollectionCache: true,

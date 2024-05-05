@@ -5,7 +5,7 @@ title: Prevent All Package Icon Downloads
 description: Allows control over whether an attempt is made to download icons associated with packages
 ---
 import Xref from '@components/Xref.astro';
-import RequireChocolateyGuiLicensedExtensionNote from '@components/docs/RequireChocolateyGuiLicensedExtensionNote.astro';
+import RequireChocolateyGuiLicensedExtensionNote from '@components/docs/RequireChocolateyGuiLicensedExtensionNote.mdx';
 
 By default, when using the <Xref title="DefaultToTileViewForLocalSource" value="default-to-tile-view-for-local-source" />, <Xref title="DefaultToTileViewForRemoteSource" value="default-to-tile-view-for-remote-source" />, or the <Xref title="ShowAdditionalPackageInformation" value="show-additional-package-information" /> features, Chocolatey GUI will attempt to download the icon for the package from the URL that is defined within the nuspec file for the package.  For the most part, this works without any problems, however, when being used within an air gapped network, with no internet access, the end result looks like this:
 
