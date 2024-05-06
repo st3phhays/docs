@@ -6,7 +6,7 @@ import { config } from '@scripts/config.ts';
 import GlobalNavigation from '@components/global/GlobalNavigation.astro';
 import ThemeToggle from '@components/global/ThemeToggle.astro';
 
-const { title, description, headings } = Astro.props;
+const { title, description } = Astro.props;
 const canonicalURL = new URL(Astro.url, Astro.site);
 const metaTitle = title !== config.title ? `${config.title} Docs | ${title}` : `${config.title} Docs`;
 const socialImageURL = new URL(`/share-og.png`, Astro.site);
@@ -73,7 +73,7 @@ const hash = childProcess
             </div>
             <nav id="topNav" class="navbar navbar-expand-md">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/en-us">
+                    <a class="navbar-brand" href="/en-us/">
                         <img class="d-md-none" src="/images/global-shared/logo.svg" alt="Chocolatey" />
                         <img class="d-none d-md-block navbar-brand-desktop" src="/images/global-shared/logo-square.svg" alt="Chocolatey" />
                     </a>

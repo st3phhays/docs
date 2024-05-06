@@ -1,37 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { xref } from '@scripts/xref.ts';
 
-const { title, value, anchor, classes } = Astro.props;
-const docsEntries = await getCollection('docs');
-const xrefs: { [key: string]: string }[] = [];
-
-docsEntries.map((doc) => {
-    // If no xref, use the slug
-    if (!doc.data.xref) {
-        const parts = doc.slug.split('/');
-        const lastPart = parts[parts.length - 1];
-
-        doc.data.xref = lastPart;
-    }
-
-    xrefs.push({
-        [doc.data.xref]: doc.slug,
-    });
-});
-
-const findKey = (array, key) => {
-    const result = array.find(item => key in item);
-    return result ? result[key] : null;
-};
-
-let xref = findKey(xrefs, value);
-
-// If an anchor was provided, append it to the slug
-if (anchor) {
-    xref = `${xref}#${anchor}`;
-}
-
-let allClasses = classes ? classes : '';
+const { title, value, anchor, classes, icon } = Astro.props;
+const link = await xref(value, anchor);
+const allClasses = classes ? classes : '';
+const iconTitle = `${title}<i class="fas ${icon} ms-1"></i>`;
 ---
 
-<a class={allClasses} href={`/${xref}`} title={title}>{title}</a>
+<a class={allClasses} href={link} title={title}>{icon ? <Fragment set:html={iconTitle} /> : title}</a>

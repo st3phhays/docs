@@ -8,6 +8,7 @@
             "@components/*": ["src/components/*"],
             "@config": ["src/config.ts"],
             "@layouts/*": ["src/layouts/*"],
+            "@root/*": ["./*"],
             "@styles/*": ["src/styles/*"],
             "@scripts/*": ["src/scripts/*"]
         }

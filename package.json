@@ -14,9 +14,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "yarn choco-theme && astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "yarn choco-theme && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "choco-theme": "yarn dlx --quiet ts-node --skipIgnore node_modules/choco-theme/build/choco-theme.ts --repository=docs"
@@ -26,10 +26,7 @@
     "@astrojs/mdx": "^2.3.1",
     "@astrojs/sitemap": "^3.1.4",
     "astro": "^4.7.0",
-    "choco-theme": "https://github.com/st3phhays/choco-theme#testing-and-development",
+    "choco-theme": "https://github.com/st3phhays/choco-theme#astro",
     "typescript": "^5.4.5"
-  },
-  "resolutions": {
-    "choco-theme": "portal:/Users/stephanieburrows/source/choco-theme"
   }
 }

@@ -1,20 +1,32 @@
 ---
-import { contentTree } from '@scripts/content-tree';
+import type { ContentTree } from '@scripts/types';
+import { generateContentTree } from '@scripts/generate-content-tree.ts';
+
+import Xref from '@components/Xref.astro';
 
 let { content, filter, value } = Astro.props;
 
 if (!content) {
-    content = contentTree;
+    content = await generateContentTree();
+    console.log('getting content...');
 }
 
-const findObjectBySlug = (obj, slug) => {
+interface Props {
+    content: ContentTree[];
+    filter?: string;
+    value?: string;
+}
+
+const findObjectBySlug = async (obj: ContentTree, slug: string): Promise<ContentTree | null> => {
     // Base case: If obj is not an object or is null, return null
     if (!obj || typeof obj !== 'object') {
+        console.log('retrning null 1');
         return null;
     }
 
     // Check if the current object has the specified slug
-    if (obj.slug === slug) {
+    if (slug === obj.slug || slug === obj.slug.slice(0, -1)) {
+        console.log('found obj', obj);
         return obj;
     }
 
@@ -22,7 +34,7 @@ const findObjectBySlug = (obj, slug) => {
     if (obj.children && obj.children.length > 0) {
         // Recursively search through the children
         for (const child of obj.children) {
-            const result = findObjectBySlug(child, slug);
+            const result = await findObjectBySlug(child, slug);
 
             // If the object with the specified slug is found in any child, return it
             if (result !== null) {
@@ -35,23 +47,24 @@ const findObjectBySlug = (obj, slug) => {
     return null;
 };
 
-// TODO: Account for trailing slash in pathname (e.g. /about/ vs /about)
-let doc = findObjectBySlug(content[0], Astro.url.pathname.substring(1));
+let doc = await findObjectBySlug(content[0], Astro.url.pathname);
 
-if (doc.children && doc.children.length > 0 && filter && value) {
-    doc = {
-        ...doc,
-        children: doc.children.filter(child => child.data[filter] === value)
-    };
-} else if (doc.children && doc.children.length > 0 && doc.data.hideChildPages) {
-    doc = {
-        ...doc,
-        children: []
-    };
+if (doc) {
+    if (doc.children && doc.children.length > 0 && filter && value) {
+        doc = {
+            ...doc,
+            children: doc.children.filter((child: { data: { [key: string]: any } }) => child.data[filter] === value)
+        };
+    } else if (doc.children && doc.children.length > 0 && doc.data.hideChildPages) {
+        doc = {
+            ...doc,
+            children: []
+        };
+    }
 }
 ---
 
-{(doc.children && doc.children.length > 0) && (
+{(doc && doc.children && doc.children.length > 0) && (
     <div class="row">
         {doc.children.map(child => (
             <div class="col-lg-6 col-xl-4 pb-4">
@@ -60,7 +73,7 @@ if (doc.children && doc.children.length > 0 && filter && value) {
                         <i class="fa-solid fa-file" aria-hidden="true"></i>
                     </div>
                     <div class="d-flex flex-column ps-3">
-                        <p class="h5 fw-bold card-title"><a class="stretched-link" href={`/${child.slug}`} title={child.data.title}>{child.data.title}</a></p>
+                        <p class="h5 fw-bold card-title"><Xref classes="stretched-link" title={child.data.title} value={child.data.xref} /></p>
                         <p class="card-content">{child.data.description}</p>
                     </div>
                 </div>

@@ -1,6 +1,5 @@
 ---
 import { config } from '@scripts/config.ts';
-import { contentTree } from '@scripts/content-tree';
 
 // Components
 import Layout from '@layouts/Layout.astro';
@@ -8,7 +7,7 @@ import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Sidebar from '@components/sidebar/Sidebar.astro';
 import GlobalNavigation from '@components/global/GlobalNavigation.astro';
 
-const { title, description } = Astro.props;
+const { title, description, contentTree } = Astro.props;
 const isHome = title === config.titleHome;
 ---
 
@@ -35,18 +34,6 @@ const isHome = title === config.titleHome;
                         <h1 class="title">{title}</h1>
                         <Breadcrumbs isHome={isHome} />
                     </div>
-                    <!-- <div class="container">
-                        <div class="row">
-                            <div id="mainContent" class="anchorjs-container col-xl-10 order-2 order-xl-1">
-                                <div class="d-none d-xl-block">
-                                    <h1 class="title">{title}</h1>
-                                    <Breadcrumbs isHome={isHome} />
-                                </div>
-                                <slot />
-                                <Children content={contentTree} />
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="container">
                         <slot />
                     </div>
