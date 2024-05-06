@@ -38,9 +38,6 @@ The values generated during the deployment are available in the `CCM.html` file 
     </li>
 </ul>
 
-::::{.tab-content .text-bg-body-secondary .p-3 .mb-3 .border-start .border-end .border-bottom .rounded-bottom}
-:::{.tab-pane .fade .show .active #scenario-one role=tabpanel aria-labelledby=scenario-one-tab}
-
 To install the Chocolatey components and on-board clients, you could run an Ansible playbook.
 
 ### ClientSetup Playbook
@@ -361,7 +358,7 @@ To install the Chocolatey components and on-board clients, you could run an Ansi
 ...
 ```
 
-<br>
+<br />
 
 After saving the example playbook to a file, e.g. `client-setup.yml`, you can run it with one of the following commands:
 
@@ -380,9 +377,6 @@ You will be prompted to enter the values mentioned above, but you can pass them 
 > This playbook will install Dotnet 4.8 to target hosts that don't have a compatible version installed.
 > 
 > This will cause machines that have the dependency installed to reboot.
-
-:::
-:::{.tab-pane .fade #scenario-two role=tabpanel aria-labelledby=scenario-two-tab}
 
 To install the Chocolatey components and on-board clients, you could run the `ClientSetup.ps1` script provided with your Chocolatey for Business Ansible Environment. By default, this script is stored in the newly created `choco-install` repository.
 
@@ -428,7 +422,7 @@ $params = @{
 & ([scriptblock]::Create($script)) @params
 ```
 
-<br>
+<br />
 
 For example, to run this locally, save the script to an accessible location (in the example below shown as `~\Downloads\ChocoOnboarding.ps1`) and run:
 
@@ -437,7 +431,7 @@ Set-ExecutionPolicy Unrestricted -Scope Process -Force
 ~\Downloads\ChocoOnboarding.ps1
 ```
 
-<br>
+<br />
 You will then be prompted for each parameter value.
 
 Alternatively, you could run the ClientSetup.ps1 script with Ansible.
@@ -512,12 +506,9 @@ An example of what to add to your Ansible tasks is shown below:
 ...
 ```
 
-</details><br>
+</details><br />
 
 This will not be as predictable as running Ansible tasks, and will report a change regardless of the result of the script.
-
-:::
-:::{.tab-pane .fade #scenario-three role=tabpanel aria-labelledby=scenario-three-tab}
 
 To install the Chocolatey components and on-board clients, you could add the example Ansible roles to a playbook.
 
@@ -560,15 +551,12 @@ You will then be able to reference the role(s) in your playbook, as shown below:
 ...
 ```
 
-<br>
+<br />
 For further information on the roles and available parameters, please refer to the readmes:
-<br>
+<br />
 
 - [Win_ChocolateyLicensed](https://github.com/chocolatey/c4b-ansible/blob/main/roles/win_chocolateylicensed/README.md)
 - [Win_ChocolateyAgent](https://github.com/chocolatey/c4b-ansible/blob/main/roles/win_chocolateyagent/README.md)
-
-:::
-::::
 
 This script will accomplish the following on your client:
 

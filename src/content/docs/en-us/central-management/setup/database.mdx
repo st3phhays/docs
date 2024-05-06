@@ -48,7 +48,7 @@ Chocolatey Central Management will not install or take a dependency on a databas
 > Incorrect credentials to the database is 90% of support tickets related to Chocolatey Central Management.
 >
 > Unless you are an expert in hooking things up to SQL Server, its probably best to stick with SQL Server Mixed Mode Authentication.
-> See <https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server>
+> See https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server
 
 ### Step 1.1: Install SQL Server
 
@@ -192,8 +192,7 @@ The Chocolatey Central Management database package will add or update a database
     </li>
 </ul>
 
-::::{.tab-content .text-bg-body-secondary .p-3 .mb-3 .border-start .border-end .border-bottom .rounded-bottom}
-:::{.tab-pane .fade .show .active #scenario-one role=tabpanel aria-labelledby=scenario-one-tab}
+
 
 #### Windows Authentication to Local SQL Server
 
@@ -229,8 +228,7 @@ choco install chocolatey-management-database -y --package-parameters='/Connectio
 >
 > The above warnings and notes apply here as well.
 
-:::
-:::{.tab-pane .fade #scenario-two role=tabpanel aria-labelledby=scenario-two-tab}
+
 
 #### Active Directory Authentication to Remote SQL Server
 
@@ -253,8 +251,6 @@ choco install chocolatey-management-database -y --package-parameters='/Connectio
 >
 > **Upgrades**: Please ensure the user running the package installation has been granted `db_owner` access to an existing database.
 
-:::
-:::{.tab-pane .fade #scenario-three role=tabpanel aria-labelledby=scenario-three-tab}
 
 #### SQL Server Authentication to Local SQL Server
 
@@ -284,8 +280,6 @@ choco install chocolatey-management-database -y --package-parameters-sensitive='
 >
 > The above warnings and notes apply here as well.
 
-:::
-:::{.tab-pane .fade #scenario-four role=tabpanel aria-labelledby=scenario-four-tab}
 
 #### SQL Server Authentication to Remote SQL Server
 
@@ -307,8 +301,6 @@ choco install chocolatey-management-database -y --package-parameters="'/SkipData
 >
 > **Upgrades**: Please ensure the login credentials provided have been given `db_owner` access to an existing database.
 
-:::
-::::
 
 ## Step 3: Set up SQL Server Logins And Access
 
@@ -469,7 +461,7 @@ The guidance in this case is either to pin to the specific version of the Chocol
 
 ### ERROR: The term ‘Install-SettingsJsonFile’ is not recognized as the name of a cmdlet, function, script file, or operable program.
 
-This is <https://github.com/chocolatey/chocolatey-licensed-issues/issues/161>.
+This is https://github.com/chocolatey/chocolatey-licensed-issues/issues/161.
 
 There are two workarounds noted:
 

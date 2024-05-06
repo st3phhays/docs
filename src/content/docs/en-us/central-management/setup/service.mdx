@@ -144,8 +144,7 @@ When Chocolatey manages the password for a local Administrator, it creates a ver
     </li>
 </ul>
 
-::::{.tab-content .text-bg-body-secondary .p-3 .mb-3 .border-start .border-end .border-bottom .rounded-bottom}
-:::{.tab-pane .fade .show .active #scenario-one role=tabpanel aria-labelledby=scenario-one-tab}
+
 
 #### Windows Authentication to Local SQL Server
 
@@ -177,8 +176,6 @@ choco install chocolatey-management-service -y --package-parameters="'/Connectio
 >
 > Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password.
 
-:::
-:::{.tab-pane .fade #scenario-two role=tabpanel aria-labelledby=scenario-two-tab}
 
 #### Active Directory Authentication to Remote SQL Server
 
@@ -196,8 +193,6 @@ choco install chocolatey-management-service -y --package-parameters="'/Connectio
 >
 > Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password.
 
-:::
-:::{.tab-pane .fade #scenario-three role=tabpanel aria-labelledby=scenario-three-tab}
 
 #### SQL Server Authentication to Local SQL Server
 
@@ -225,9 +220,6 @@ choco install chocolatey-management-service -y --package-parameters-sensitive="'
 >
 > Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
-:::
-:::{.tab-pane .fade #scenario-four role=tabpanel aria-labelledby=scenario-four-tab}
-
 #### SQL Server Authentication to Remote SQL Server
 
 Split - you are installing the management service(s) on a server, and targeting an existing SQL Server instance in your organization. You have set up the <Xref title="database" value="ccm-database" /> to use Mixed Mode Authentication.
@@ -240,8 +232,6 @@ choco install chocolatey-management-service -y --package-parameters-sensitive="'
 >
 > Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
-:::
-::::
 
 ## Step 3: Verify Installation
 

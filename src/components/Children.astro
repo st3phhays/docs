@@ -35,6 +35,7 @@ const findObjectBySlug = (obj, slug) => {
     return null;
 };
 
+// TODO: Account for trailing slash in pathname (e.g. /about/ vs /about)
 let doc = findObjectBySlug(content[0], Astro.url.pathname.substring(1));
 
 if (doc.children && doc.children.length > 0 && filter && value) {

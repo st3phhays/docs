@@ -107,8 +107,6 @@ This includes (but may not be limited to):
     </li>
 </ul>
 
-::::{.tab-content .text-bg-body-secondary .p-3 .mb-3 .border-start .border-end .border-bottom .rounded-bottom}
-:::{.tab-pane .fade .show .active #scenario-one role=tabpanel aria-labelledby=scenario-one-tab}
 
 #### Windows Authentication to Local SQL Server
 
@@ -140,8 +138,6 @@ choco install chocolatey-management-web -y --package-parameters="'/ConnectionStr
 >
 > Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password. Whatever is running the IIS Application Pool is the user you need to ensure is in the database.
 
-:::
-:::{.tab-pane .fade #scenario-two role=tabpanel aria-labelledby=scenario-two-tab}
 
 #### Active Directory Authentication to Local SQL Server
 
@@ -155,8 +151,6 @@ choco install chocolatey-management-web -y --package-parameters="'/ConnectionStr
 >
 > Note the connection string doesn't include credentials. That's because Windows Authentication for SQL Server uses the context of what is running it and why the service itself needs the right user/password. In this case, whatever is running the IIS Application Pool is the user you need to ensure has access to the database.
 
-:::
-:::{.tab-pane .fade #scenario-three role=tabpanel aria-labelledby=scenario-three-tab}
 
 #### SQL Server Authentication to Local SQL Server
 
@@ -184,8 +178,6 @@ choco install chocolatey-management-web -y --package-parameters-sensitive="'/Con
 >
 > Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
-:::
-:::{.tab-pane .fade #scenario-four role=tabpanel aria-labelledby=scenario-four-tab}
 
 #### SQL Server Authentication to Remote SQL Server
 
@@ -199,8 +191,7 @@ choco install chocolatey-management-web -y --package-parameters-sensitive="'/Con
 >
 > Please ensure the login has been given `db_datareader` and `db_datawriter` access to the database. See <Xref title="logins and access" value="ccm-database" anchor="step-2-set-up-sql-server-logins-and-access" />.
 
-:::
-::::
+
 
 ## Step 3: Verify Installation
 

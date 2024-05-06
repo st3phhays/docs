@@ -1,35 +1,44 @@
 ---
 import { getCollection } from 'astro:content';
 import { config } from '@scripts/config';
+import { contentTree } from '@scripts/content-tree';
+import { contentToc } from '@scripts/content-toc';
 
-import Layout from '@layouts/Layout.astro';
+import LayoutDocs from '@layouts/LayoutDocs.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import Children from '@components/Children.astro';
+import TableOfContents from '@components/toc/TableOfContents.astro';
 import Xref from '@components/Xref.astro';
 
-export async function getStaticPaths() {
+export const getStaticPaths = (async () => {
     const pages = await getCollection('docs');
 
-    const paths = pages.map(page => {
+    const paths = pages.map((page, index) => {
         const [lang, ...slug] = page.slug.split('/');
         return {
             params: {
                 lang,
                 slug: slug.join('/') || undefined
             },
-            props: page
+            props: page,
         };
     });
 
     return paths;
-}
+});
 
 const { lang, slug } = Astro.params;
 const page = Astro.props;
 
 const isHome = page.data.title === config.titleHome;
+
 const { Content } = await page.render();
+
+const headings = await page.render().then(data => data.headings);
+const headingsTree = contentToc(headings);
 ---
 
-<Layout title={page.data.title}>
+<LayoutDocs title={page.data.title}>
     {isHome ? (
         <div class="row">
             <div class="mb-4 col-lg-6 col-xl-8">
@@ -48,6 +57,16 @@ const { Content } = await page.render();
             </div>
         </div>
     ) : (
-        <Content />
+        <div class="row">
+            <div id="mainContent" class="anchorjs-container col-xl-10 order-2 order-xl-1">
+                <div class="d-none d-xl-block">
+                    <h1 class="title">{page.data.title}</h1>
+                    <Breadcrumbs isHome={isHome} />
+                </div>
+                <Content />
+                <Children content={contentTree} />
+            </div>
+            <TableOfContents content={headingsTree} />
+        </div>
     )}
-</Layout>
+</LayoutDocs>
