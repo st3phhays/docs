@@ -8,7 +8,6 @@ let { content, filter, value } = Astro.props;
 
 if (!content) {
     content = await generateContentTree();
-    console.log('getting content...');
 }
 
 interface Props {
@@ -20,13 +19,11 @@ interface Props {
 const findObjectBySlug = async (obj: ContentTree, slug: string): Promise<ContentTree | null> => {
     // Base case: If obj is not an object or is null, return null
     if (!obj || typeof obj !== 'object') {
-        console.log('retrning null 1');
         return null;
     }
 
     // Check if the current object has the specified slug
     if (slug === obj.slug || slug === obj.slug.slice(0, -1)) {
-        console.log('found obj', obj);
         return obj;
     }
 

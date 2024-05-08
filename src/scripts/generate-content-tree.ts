@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { getCollection } from 'astro:content';
+import { contentTreeSchema } from '@scripts/types'
 import type { ContentTree, ContentTreeBase } from '@scripts/types';
 
 export const generateContentTree = async (parentSlug = ""): Promise<ContentTree[]> => {
@@ -57,6 +58,9 @@ export const generateContentTree = async (parentSlug = ""): Promise<ContentTree[
     };
 
     const treeWithDepths = addDepthToTree(result);
+
+    // Ensure the tree is valid
+    contentTreeSchema.parse(treeWithDepths[0]);
 
     return treeWithDepths;
 };

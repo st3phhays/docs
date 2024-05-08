@@ -26,6 +26,9 @@ export type ContentTreeBase = z.infer<typeof contentTreeBaseSchema>;
 export type ContentTree = z.infer<typeof contentTreeBaseSchema> & {
     children: ContentTree[];
 };
+export const contentTreeSchema: z.ZodType<ContentTree> = contentTreeBaseSchema.extend({
+    children: z.lazy(() => contentTreeSchema.array()),
+});
 
 // ContentToc
 
