@@ -10,7 +10,6 @@ interface Props {
 
 const { content } = Astro.props;
 const activeSlug = Astro.url.pathname;
-
 const listItemPaddingClass = (depth: number) => {
     let paddingClass = '';
     switch (depth) {

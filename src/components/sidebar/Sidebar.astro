@@ -1,8 +1,8 @@
 ---
-import { config } from '@scripts/config';
 import type { ContentTree } from '@scripts/types';
 
 // Components
+import HighlightsSidebar from '@components/highlights/HighlightsSidebar.astro';
 import SidebarSelf from '@components/sidebar/SidebarSelf.astro';
 import SidebarListItem from '@components/sidebar/SidebarListItem.astro';
 
@@ -14,8 +14,9 @@ const { content } = Astro.props;
 ---
 
 <ul class="navbar-nav">
+    <HighlightsSidebar />
     {content.filter(doc => doc.data.showInSidebar === true).map(doc=> (
-        doc.data.title == config.titleHome && (
+        doc.data.xref === 'home' && (
             <SidebarListItem content={doc} paddingClass={'ps-c2'} />
         )
     ))}

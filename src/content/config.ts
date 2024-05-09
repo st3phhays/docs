@@ -12,9 +12,17 @@ const docsCollection = defineCollection({
         ogImage: z.string().optional(),
         twitterImage: z.string().optional(),
         ruleType: z.string().optional(),
-        redirectFrom: z.union([z.string(), z.array(z.string())]).optional(),
         showInSidebar: z.boolean().optional().default(true),
-        hideChildPages: z.boolean().optional().default(false)
+        hideChildPages: z.boolean().optional().default(false),
+        highlight: z.object({
+            ctaXref: z.string(),
+            ctaAnchor: z.string().optional(),
+            ctaText: z.string(),
+            postedDateTime: z.date(),
+            showOnHome: z.boolean().optional().default(true),
+            showOnHighlights: z.boolean().optional().default(true),
+            showInSidebar: z.boolean().optional().default(false)
+        }).optional()
     }),
 });
 

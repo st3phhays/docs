@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import { config } from '@scripts/config';
 import { generateContentToc } from '@scripts/generate-content-toc.ts';
 import { generateContentTree } from '@scripts/generate-content-tree.ts';
 
@@ -8,10 +7,11 @@ import LayoutDocs from '@layouts/LayoutDocs.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Children from '@components/Children.astro';
 import TableOfContents from '@components/toc/TableOfContents.astro';
-import Xref from '@components/Xref.astro';
 
 export const getStaticPaths = (async () => {
-    const pages = await getCollection('docs');
+    const pages = await getCollection('docs', ({ data }) => {
+        return data.highlight === undefined;
+    });
 
     const paths = pages.map(page => {
         const [lang, ...slug] = page.slug.split('/');
@@ -30,7 +30,7 @@ export const getStaticPaths = (async () => {
 // const { lang, slug } = Astro.params;
 const page = Astro.props;
 
-const isHome = page.data.title === config.titleHome;
+const isHome = page.data.xref === 'home';
 
 const { Content } = await page.render();
 
@@ -40,35 +40,15 @@ const contentTree = await generateContentTree();
 ---
 
 <LayoutDocs title={page.data.title} description={page.data.description} contentTree={contentTree}>
-    {isHome ? (
-        <div class="row">
-            <div class="mb-4 col-lg-6 col-xl-8">
-                <div class="card card-link card-body bg-retrowave1 h-100 lead p-md-5 d-flex justify-content-center">
-                    <p class="z-1">Discover the power of Chocolatey with our comprehensive Getting Started guide, providing an overview of its requirements, terminology, functionality, and its ability to simplify software management on Windows.</p>
-                    {/* <a class="z-1 stretched-link link-primary p-0" href='@Context.GetLink("/en-us/getting-started")'>Get Started with Chocolatey<i class="fas fa-arrow-right ms-1"></i></a> */}
-                    <Xref title="Get Started with Chocolatey" value="getting-started" classes="z-1 stretched-link link-primary p-0" icon="fa-arrow-right"></Xref>
-                </div>
+    <div class="row">
+        <div id="mainContent" class="anchorjs-container col-xl-10 order-2 order-xl-1">
+            <div class="d-none d-xl-block">
+                <h1 class="title">{page.data.title}</h1>
+                <Breadcrumbs isHome={isHome} />
             </div>
-            <div class="mb-4 col-lg-6 col-xl-4">
-                <div class="card card-link card-body bg-primary-opacity-25 h-100 lead p-md-5 d-flex justify-content-center">
-                    <p>Ready to unlock the convenience of Chocolatey? Visit our installation guide to learn how to effortlessly set up Chocolatey CLI in seconds.</p>
-                    <div>
-                        <Xref title="Install Chocolatey CLI" value="setup-choco" classes="btn btn-dark text-white stretched-link">Install Chocolatey CLI</Xref>
-                    </div>
-                </div>
-            </div>
+            <Content />
+            <Children content={contentTree} />
         </div>
-    ) : (
-        <div class="row">
-            <div id="mainContent" class="anchorjs-container col-xl-10 order-2 order-xl-1">
-                <div class="d-none d-xl-block">
-                    <h1 class="title">{page.data.title}</h1>
-                    <Breadcrumbs isHome={isHome} />
-                </div>
-                <Content />
-                <Children content={contentTree} />
-            </div>
-            <TableOfContents content={contentToc} />
-        </div>
-    )}
+        <TableOfContents content={contentToc} />
+    </div>
 </LayoutDocs>

@@ -5,6 +5,7 @@
         "authenticode",
         "Checksumming",
         "chocolateypackage",
+        "datetime",
         "Intune",
         "MITM",
         "nocheck",
