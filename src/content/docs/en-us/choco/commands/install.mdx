@@ -44,6 +44,7 @@ Installs a package or a list of packages (sometimes specified as a
 
 ## Examples
 
+```sh
     choco install sysinternals
     choco install notepadplusplus googlechrome atom 7zip
     choco install notepadplusplus --force --force-dependencies
@@ -56,12 +57,15 @@ Installs a package or a list of packages (sometimes specified as a
     choco install nodejs.install --version 0.10.35
     choco install git -s "'https://somewhere/out/there'"
     choco install git -s "'https://somewhere/protected'" -u user -p pass
+```
 
 (DEPRECATED) Choco can also install directly from a nuspec/nupkg file. This aids in
  testing packages:
 
+```sh
     choco install <path/to/nuspec>
     choco install <path/to/nupkg>
+```
 
 > :choco-info: **NOTE**
 >

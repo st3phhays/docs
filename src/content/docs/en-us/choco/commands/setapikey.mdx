@@ -24,6 +24,7 @@ Anything that doesn't contain source and key will list API keys.
 
 ## Examples
 
+```sh
     choco apikey
     choco apikey -s https://somewhere/out/there
     choco apikey list
@@ -32,6 +33,7 @@ Anything that doesn't contain source and key will list API keys.
     choco apikey add -s "https://push.chocolatey.org/" -k="123-123123-123"
     choco apikey add -s "http://internal_nexus" -k="user:password"
     choco apikey remove -s https://somewhere/out/there
+```
 
 For source location, this can be a folder/file share or an
 http location. When it comes to urls, they can be different from the packages
@@ -60,8 +62,9 @@ In order to save your API key for https://push.chocolatey.org/,
  https://push.chocolatey.org/, go to https://push.chocolatey.org/account,
  copy the API Key, and then use it in the following command:
 
+```sh
     choco apikey add -k <your key here> -s https://push.chocolatey.org/
-
+```
 
 ## Exit Codes
 

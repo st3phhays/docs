@@ -29,7 +29,7 @@ Internalizing a Chocolatey package at a high level involves:
 1. Editing the install script to point to the internal/embedded software.
 1. Packaging it back up (recompiling).
 1. Pushing it to your internal server.
-1. And that’s it!
+1. And that's it!
 
 Recompiling is a great way to quickly get your organization up to speed on managing software with Chocolatey packages.
 
@@ -83,6 +83,7 @@ To make the existing package local, use these steps.
 
 1. Next, open the `*.nuspec` file to view its contents and make any necessary changes.
 
+```xml
        <?xml version="1.0"?>
        <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
          <metadata>
@@ -99,6 +100,7 @@ To make the existing package local, use these steps.
            <tags>notepad notepadplusplus notepad-plus-plus</tags>
          </metadata>
        </package>
+```
 
    Some organizations will change the version field to denote this is an edited internal package, for example changing `6.8.7` to `6.8.7.20151202`. For now, this is not necessary.
 
