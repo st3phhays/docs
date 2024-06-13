@@ -7,6 +7,9 @@ import { mermaidConfig } from 'choco-astro/src/scripts/util/mermaid-config';
 
 export default defineConfig({
     site: 'https://docs.chocolatey.org',
+    build: {
+        format: 'preserve'
+    },
     vite: {
         optimizeDeps: {
             exclude: ['fsevents']
