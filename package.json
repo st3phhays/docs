@@ -38,12 +38,12 @@
   },
   "devDependencies": {
     "@chocolatey-software/assets": "2.0.0",
-    "@chocolatey-software/astro": "2.9.2",
-    "@chocolatey-software/build-tools": "2.9.2",
+    "@chocolatey-software/astro": "2.10.0",
+    "@chocolatey-software/build-tools": "2.10.0",
     "@chocolatey-software/playwright": "2.8.0"
   },
   "dependencies": {
-    "@chocolatey-software/docs": "2.9.1"
+    "@chocolatey-software/docs": "2.10.0"
   },
   "resolutions": {
     "@playwright/test": "^1.60.0"
