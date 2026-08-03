@@ -1,7 +1,7 @@
 ---
 order: 60
 xref: integrations
-title: Integrates with everything
+title: Integrates With Anything
 description: Information on how Chocolatey can integrate with almost every tool
 ---
 import Callout from '@choco-astro/components/Callout.astro';
@@ -9,11 +9,11 @@ import Iframe from '@choco-astro/components/Iframe.astro';
 import Xref from '@components/Xref.astro';
 import ConfigurationManagers from '@components/docs/ConfigurationManagers.mdx';
 
-Chocolatey integrates with several infrastructure automation tools!
+## Summary
+
+Chocolatey can be used with almost every mainstream infrastructure automation tool! Some of the more popular ones are listed below.
 
 With most of these tools, the interface you would interact with Chocolatey would be through the tool or through the interfaces of the tool, like in scripts.
-
-## Summary
 
 ### Chocolatey Integration Implementation with Common Configuration Managers
 
@@ -29,7 +29,7 @@ win_chocolatey:
   source: https://my.internal.repository/api/v2/
 ```
 
-[Read More...](https://docs.ansible.com/ansible/latest/collections/chocolatey/chocolatey/win_chocolatey_source_module.html)
+[Read More...](https://docs.ansible.com/projects/ansible/latest/collections/chocolatey/chocolatey/index.html)
 
 ## Boxstarter
 
@@ -95,13 +95,13 @@ node.default['cpe_choco']['sources']['bacon'] =
 
 Octopus is a friendly deployment automation tool for .NET developers. It integrates with lots of utilities, and they have a template for installing Chocolatey packages: https://library.octopusdeploy.com/step-template/actiontemplate-chocolatey-install-package
 
-[Read more...](https://octopus.com/)
+[Read more...](https://octopus.com/docs/runbooks/runbook-examples/routine/installing-software-chocolatey)
 
-## Otter
+## BuildMaster/Otter
 
-Otter has an [open source Chocolatey extension](https://github.com/Inedo/inedox-chocolatey) that allows installing and uninstalling packages, specifying package versions, chocolatey sources, chocolatey features, and installing chocolatey itself.
+Inedo has an [open source Chocolatey extension](https://github.com/Inedo/inedox-chocolatey) that allows installing and uninstalling packages, specifying package versions, Chocolatey sources, Chocolatey features, and installing Chocolatey itself.
 
-Otter also keeps an inventory of Chocolatey packages installed on any or all servers.
+BuildMaster/Otter also keeps an inventory of Chocolatey packages installed on any or all servers.
 
 ```powershell
 Chocolatey::Ensure-Package
@@ -131,26 +131,7 @@ Chocolatey::Ensure-Feature
 );
 ```
 
-[Read More...](https://inedo.com/den/otter/chocolatey)
-
-## PowerShell DSC
-
-PowerShell DSC (Desired State Configuration) has a cChoco module that can manage both packages and the installation of Chocolatey itself.
-
-```powershell
-  cChocoInstaller installChoco
-  {
-    InstallDir = "c:\ProgramData\chocolatey"
-  }
-
-  cChocoPackageInstaller installGit
-  {
-     Name = "git"
-     DependsOn = "[cChocoInstaller]installChoco"
-  }
-```
-
-[Read More...](http://www.powershellgallery.com/packages/cChoco/)
+[Read More...](https://buildmaster.inedo.com/applications/15/overview)
 
 ## PowerShell PackageManagement
 
@@ -215,7 +196,7 @@ salt '*' chocolatey.bootstrap
 salt '*' chocolatey.install git
 ```
 
-[Read More...](https://docs.saltstack.com/en/latest/ref/modules/all/salt.modules.chocolatey.html)
+[Read More...](https://docs.saltproject.io/en/latest/ref/modules/all/salt.modules.chocolatey.html)
 
 ## System Center Configuration Manager
 
